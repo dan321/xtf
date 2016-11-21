@@ -238,7 +238,7 @@
             </publisher>
          </xsl:when>
          <xsl:when test="//*:text/*:front/*:titlePage//*:publisher">
-            <publisher xtf-meta="true">
+            <publisher xtf:meta="true">
                <xsl:value-of select="string(//*:text/*:front/*:titlePage//*:publisher[1])"/>
             </publisher>
          </xsl:when>
@@ -254,7 +254,7 @@
    <xsl:template name="get-tei-contributor">
       <xsl:choose>
          <xsl:when test="//*:fileDesc/*:respStmt/*:name">
-            <contributor xtf-meta="true">
+            <contributor xtf:meta="true">
                <xsl:value-of select="string(//*:fileDesc/*:respStmt/*:name[1])"/>
             </contributor>
          </xsl:when>
@@ -268,7 +268,14 @@
    
    <!-- date --> 
    <xsl:template name="get-tei-date">
+      <xsl:variable name="source-date" select="//*:fileDesc/*:sourceDesc/*:bibl/*:date"/>
       <xsl:choose>
+         <xsl:when test="$source-date">
+            <date xtf:meta="true">
+               <!-- use the date's @when attribute if it has one, otherwise the element content -->
+               <xsl:value-of select="($source-date/@when, $source-date)[1]"/>
+            </date>
+         </xsl:when>
          <xsl:when test="//*:fileDesc/*:publicationStmt/*:date">
             <date xtf:meta="true">
                <xsl:value-of select="string(//*:fileDesc/*:publicationStmt/*:date)"/>
@@ -317,7 +324,7 @@
    <xsl:template name="get-tei-source">
       <xsl:choose>
          <xsl:when test="//*:sourceDesc/*:bibl">
-            <source xtf-meta="true">
+            <source xtf:meta="true">
                <xsl:value-of select="string(//*:sourceDesc/*:bibl[1])"/>
             </source>
          </xsl:when>
@@ -333,9 +340,12 @@
    <xsl:template name="get-tei-language">
       <xsl:choose>
          <xsl:when test="//*:profileDesc/*:langUsage/*:language">
-            <language xtf-meta="true">
-               <xsl:value-of select="string((//*:profileDesc/*:langUsage/*:language)[1])"/>
-            </language>
+            <!-- modified for VMCP to support multiple languages -->
+            <xsl:for-each select="//*:profileDesc/*:langUsage/*:language">
+               <language xtf:meta="true">
+                  <xsl:value-of select="."/>
+               </language>
+            </xsl:for-each>
          </xsl:when>
          <xsl:otherwise>
             <language xtf:meta="true">
@@ -349,7 +359,7 @@
    <xsl:template name="get-tei-relation">
       <xsl:choose>
          <xsl:when test="//*:fileDesc/*:seriesStmt/*:title">
-            <relation xtf-meta="true">
+            <relation xtf:meta="true">
                <xsl:value-of select="string(//*:fileDesc/*:seriesStmt/*:title)"/>
             </relation>
          </xsl:when>
@@ -370,7 +380,7 @@
    
    <!-- rights -->
    <xsl:template name="get-tei-rights">
-      <rights xtf-meta="true">
+      <rights xtf:meta="true">
          <xsl:value-of select="'public'"/>
       </rights>
    </xsl:template>
