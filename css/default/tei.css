@@ -83,6 +83,42 @@ margin-top: 0;
 margin-bottom: 0; 
 }
 
+/* tab spaces */
+SPAN.tab {
+	display: inline-block;
+	width: 8em;
+}
+
+/* display class names (for VMCP project) */
+P {
+	margin-left: 9em;
+	padding: 0.25em;
+	/*background-color: #F2F2F2;*/
+	position: relative;
+}
+P::before {
+	display: block;
+	position: absolute;
+	content: attr(class);
+	color: #222222;
+	font-weight: bold;
+	font-style: italic;
+	font-family: sans-serif;
+	margin-right: 0.5em;
+	padding-right: 0.25em;
+	left: -10em;
+	text-align: right;
+	width: 9em;
+}
+
+/* VMCP addition for styling languages distinctly */
+P:lang(de) {
+	background-color: #F2FFF2;
+}
+P:lang(en) {
+	background-color: #F2F2FF;
+}
+
 /* LISTS */
 
 UL.nobull  {

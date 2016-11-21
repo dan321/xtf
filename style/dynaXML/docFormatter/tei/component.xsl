@@ -182,11 +182,23 @@
       </xsl:choose>
    </xsl:template>
    
+   <!-- VMCP removed this which makes no sense -->
+   <!--
    <xsl:template match="*:seg">
       <xsl:if test="position() > 1">
          <xsl:text>&#160;&#160;&#160;&#160;</xsl:text>
       </xsl:if>
       <xsl:apply-templates/><br/>
+   </xsl:template>
+   -->
+   <xsl:template match="*:seg">
+   	<xsl:element name="span">
+   		<xsl:for-each select="@rend">
+   			<xsl:attribute name="class" select="."/>
+   		</xsl:for-each>
+   		<xsl:copy-of select="@style"/>
+   		<xsl:apply-templates/>
+   	</xsl:element>
    </xsl:template>
    
    <!-- ====================================================================== -->
@@ -367,8 +379,26 @@
    <!-- Paragraphs                                                             -->
    <!-- ====================================================================== -->
    
+   <!-- customized for VMCP by generating an HTML paragraph with a class based on the original
+   MS Word style name (CSS then displays this as a label), and inside that, a span which carries the
+   CSS rules which represent the directly applied formatting inherited from each Word document -->
    <xsl:template match="*:p[not(ancestor::note[@type='endnote' or @place='end'])]">
-      
+      <xsl:element name="p">
+      	<xsl:attribute name="lang" select="@xml:lang"/>
+      	<xsl:if test="@rend">
+      		<xsl:attribute name="class" select="@rend"/>
+      	</xsl:if>
+      	<xsl:element name="span">
+      		<xsl:attribute name="style" select="
+			concat(
+				'display: block; ',
+				@style
+			)
+		"/>
+      	      	<xsl:apply-templates/>
+      	 </xsl:element>
+      </xsl:element>
+      	<!--
       <xsl:choose>
          <xsl:when test="@rend='center'">
             <p class="center"><xsl:apply-templates/></p>
@@ -425,6 +455,7 @@
             </xsl:choose>
          </xsl:otherwise>
       </xsl:choose>
+      -->
       
    </xsl:template>
    
@@ -589,6 +620,10 @@
    
    <xsl:template match="*:lb">
       <br/>
+   </xsl:template>
+   
+   <xsl:template match="*:space[@dim='horizontal'][@extent='tab']">
+   	<span class="tab"><xsl:value-of select="codepoints-to-string(9)"/></span>
    </xsl:template>
    
    <!-- ====================================================================== -->
