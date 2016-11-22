@@ -132,6 +132,7 @@
             <xsl:otherwise>
                <xsl:call-template name="get-tei-title"/>
                <xsl:call-template name="get-tei-creator"/>
+               <xsl:call-template name="get-tei-addressee"/>
                <xsl:call-template name="get-tei-subject"/>
                <xsl:call-template name="get-tei-description"/>
                <xsl:call-template name="get-tei-publisher"/>
@@ -184,6 +185,15 @@
       </xsl:choose>
    </xsl:template>
    
+   <!-- additional VMCP facet "addressee" -->
+   <xsl:template name="get-tei-addressee">
+   	<xsl:for-each select="//*:correspAction[@type='sentTo']/*:name">
+   		<xsl:element name="facet-addressee" use-attribute-sets="facet-attributes">
+   			<xsl:value-of select="."/>
+   		</xsl:element>
+   	</xsl:for-each>
+   </xsl:template>
+   
    <!-- creator --> 
    <xsl:template name="get-tei-creator">
       <xsl:choose>
@@ -191,6 +201,10 @@
             <creator xtf:meta="true">
                <xsl:value-of select="string(//*:fileDesc/*:titleStmt/*:author[1])"/>
             </creator>
+            <!-- VMCP added a facet for "author" -->
+            <xsl:element name="facet-author" use-attribute-sets="facet-attributes">
+               <xsl:value-of select="string(//*:fileDesc/*:titleStmt/*:author[1])"/>
+            </xsl:element>
          </xsl:when>
          <xsl:when test="//*:titlePage/*:docAuthor">
             <creator xtf:meta="true">
@@ -206,6 +220,8 @@
    </xsl:template>
    
    <!-- subject --> 
+   <!--
+   replaced with a template which indexes keywords from different vocabularies distinctly
    <xsl:template name="get-tei-subject">
       <xsl:choose>
          <xsl:when test="//*:keywords/*:list/*:item">
@@ -216,6 +232,36 @@
             </xsl:for-each>
          </xsl:when>
       </xsl:choose>
+   </xsl:template>
+   -->
+   
+   <xsl:attribute-set name="facet-attributes">
+   	<xsl:attribute name="xtf:meta" select="'true'"/>
+   	<xsl:attribute name="xtf:indexOnly" select="'yes'"/>
+   	<xsl:attribute name="xtf:facet" select="'yes'"/>
+   </xsl:attribute-set>
+   
+   <xsl:template name="get-tei-subject">
+   	<xsl:for-each select="//*:keywords">
+   		<xsl:variable name="taxonomy-id" select="substring-after(@scheme, '#')"/>
+   		<xsl:choose>
+   			<xsl:when test="$taxonomy-id">
+				<xsl:for-each select=".//*:term">
+					<xsl:element name="{concat('facet-', $taxonomy-id)}" use-attribute-sets="facet-attributes">
+						<xsl:value-of select="."/>
+					</xsl:element>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select=".//*:term">
+					<xsl:element name="subject">
+						<xsl:attribute name="xtf:meta" select="'true'"/>
+						<xsl:value-of select="."/>
+					</xsl:element>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:for-each>
    </xsl:template>
    
    <!-- description --> 
@@ -271,10 +317,16 @@
       <xsl:variable name="source-date" select="//*:fileDesc/*:sourceDesc/*:bibl/*:date"/>
       <xsl:choose>
          <xsl:when test="$source-date">
-            <date xtf:meta="true">
+            <xsl:element name="facet-date" use-attribute-sets="facet-attributes">
                <!-- use the date's @when attribute if it has one, otherwise the element content -->
-               <xsl:value-of select="($source-date/@when, $source-date)[1]"/>
-            </date>
+               <!-- <xsl:value-of select="($source-date/@when, $source-date)[1]"/> -->
+               <xsl:value-of select="
+               	concat(
+               		substring($source-date/@when, 1, 3), '0s::',
+               		replace($source-date/@when, '-', '::')
+               	)
+               "/>
+            </xsl:element>
          </xsl:when>
          <xsl:when test="//*:fileDesc/*:publicationStmt/*:date">
             <date xtf:meta="true">
@@ -340,17 +392,17 @@
    <xsl:template name="get-tei-language">
       <xsl:choose>
          <xsl:when test="//*:profileDesc/*:langUsage/*:language">
-            <!-- modified for VMCP to support multiple languages -->
+            <!-- modified for VMCP to support multiple languages, and also as facets -->
             <xsl:for-each select="//*:profileDesc/*:langUsage/*:language">
-               <language xtf:meta="true">
+               <xsl:element name="facet-language" use-attribute-sets="facet-attributes">
                   <xsl:value-of select="."/>
-               </language>
+               </xsl:element>
             </xsl:for-each>
          </xsl:when>
          <xsl:otherwise>
-            <language xtf:meta="true">
-               <xsl:value-of select="'english'"/>
-            </language>
+               <xsl:element name="facet-language" use-attribute-sets="facet-attributes">
+	               <xsl:value-of select="'english'"/>
+	      </xsl:element>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>

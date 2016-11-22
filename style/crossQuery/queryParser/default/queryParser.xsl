@@ -113,6 +113,47 @@
             <xsl:attribute name="explainScores" select="$explainScores"/>
          </xsl:if>
          
+         <!-- additional VMCP facets added -->
+         
+         <!-- language facet -->
+         <xsl:call-template name="facet">
+            <xsl:with-param name="field" select="'facet-language'"/>
+            <xsl:with-param name="topGroups" select="'*'"/>
+            <xsl:with-param name="sort" select="'totalDocs'"/>
+         </xsl:call-template>
+
+         <!-- author facet -->
+         <xsl:call-template name="facet">
+            <xsl:with-param name="field" select="'facet-author'"/>
+            <xsl:with-param name="topGroups" select="'*[1-10]'"/>
+            <xsl:with-param name="sort" select="'totalDocs'"/>
+         </xsl:call-template>
+
+         <!-- addressee facet -->
+         <xsl:call-template name="facet">
+            <xsl:with-param name="field" select="'facet-addressee'"/>
+            <xsl:with-param name="topGroups" select="'*[1-10]'"/>
+            <xsl:with-param name="sort" select="'totalDocs'"/>
+         </xsl:call-template>
+
+         <!-- plant names facet, normally shows top 10 sorted by count, but user can select 'more' 
+              to see all sorted by plant names. 
+         -->
+         <xsl:call-template name="facet">
+            <xsl:with-param name="field" select="'facet-plant-names'"/>
+            <xsl:with-param name="topGroups" select="'*[1-5]'"/>
+            <xsl:with-param name="sort" select="'totalDocs'"/>
+         </xsl:call-template>
+         
+         <!-- validity facet, normally shows top 10 sorted by count, but user can select 'more' 
+              to see all sorted by subject. 
+         -->
+         <xsl:call-template name="facet">
+            <xsl:with-param name="field" select="'facet-validity'"/>
+            <xsl:with-param name="topGroups" select="'*[1-5]'"/>
+            <xsl:with-param name="sort" select="'totalDocs'"/>
+         </xsl:call-template>
+         
          <!-- subject facet, normally shows top 10 sorted by count, but user can select 'more' 
               to see all sorted by subject. 
          -->
