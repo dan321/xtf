@@ -283,7 +283,13 @@
    <!-- ====================================================================== -->
    <!-- Notes                                                                  -->
    <!-- ====================================================================== -->
-   
+   <!-- VMCP replacement -->
+   <xsl:template match="*:note">
+   	<xsl:variable name="note-marker" select=" (@n, '*')[1] "/>
+   	<xsl:variable name="note-id" select=" concat('note-', (@n, generate-id())[1] ) "/>
+   	<a class="note-ref" href="#{$note-id}"><xsl:value-of select="$note-marker"/></a>
+   </xsl:template>
+   <!--
    <xsl:template match="*:note">
       <xsl:choose>
          <xsl:when test="@type='footnote' or @place='foot'">
@@ -374,6 +380,15 @@
          </xsl:if>
       </p>
    </xsl:template>
+   -->
+   
+   <!-- div elements for VMCP -->
+   <xsl:template match="*:div">
+   	<xsl:element name="div">
+   		<xsl:for-each select="@type"><xsl:attribute name="class" select="."/></xsl:for-each>
+   		<xsl:apply-templates/>
+   	</xsl:element>
+   </xsl:template>
    
    <!-- ====================================================================== -->
    <!-- Paragraphs                                                             -->
@@ -395,9 +410,21 @@
 				@style
 			)
 		"/>
+		<!-- if first para in note, insert a label -->
+   		<xsl:for-each select="self::*[not(preceding-sibling::*)]/ancestor::*:note">
+   			<xsl:variable name="note-id" select=" concat('note-', (@n, generate-id())[1] ) "/>
+   			<xsl:variable name="note-marker" select=" (@n, '*')[1] "/>
+   			<span class="note-label" id="{$note-id}"><xsl:value-of select="$note-marker"/></span>
+   		</xsl:for-each>
       	      	<xsl:apply-templates/>
       	 </xsl:element>
       </xsl:element>
+      <xsl:for-each select=".//*:note">
+   	<div class="note">
+   		<xsl:apply-templates/>
+   	</div>
+      </xsl:for-each>
+
       	<!--
       <xsl:choose>
          <xsl:when test="@rend='center'">

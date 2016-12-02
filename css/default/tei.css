@@ -10,6 +10,19 @@ margin-left: 28px;
 margin-right: 28px;
 }
 
+div.note {
+	background-color: #FEFFA9;
+	font-size: small;
+}
+div.note p {
+	background-color: inherit;
+}
+
+a.note-ref {
+	font-variant-position: super;
+}
+	
+
 DIV.illgrp {
 text-align: center;
 }
