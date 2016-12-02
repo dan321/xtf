@@ -305,6 +305,8 @@
                               	<!-- VMCP includes these new facets -->
                               	<xsl:apply-templates select="facet[@field='facet-validity']"/>
                               	<xsl:apply-templates select="facet[@field='facet-author']"/>
+                              	<xsl:apply-templates select="facet[@field='facet-features']"/>
+                              	<xsl:apply-templates select="facet[@field='facet-styles']"/>
                               	<xsl:apply-templates select="facet[@field='facet-addressee']"/>
                               	<xsl:apply-templates select="facet[@field='facet-language']"/>
                               	<xsl:apply-templates select="facet[@field='facet-plant-names']"/>

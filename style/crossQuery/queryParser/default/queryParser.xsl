@@ -122,6 +122,20 @@
             <xsl:with-param name="sort" select="'totalDocs'"/>
          </xsl:call-template>
 
+         <!-- features facet -->
+         <xsl:call-template name="facet">
+            <xsl:with-param name="field" select="'facet-features'"/>
+            <xsl:with-param name="topGroups" select="'*'"/>
+            <xsl:with-param name="sort" select="'totalDocs'"/>
+         </xsl:call-template>
+
+         <!-- styles facet -->
+         <xsl:call-template name="facet">
+            <xsl:with-param name="field" select="'facet-styles'"/>
+            <xsl:with-param name="topGroups" select="'*'"/>
+            <xsl:with-param name="sort" select="'totalDocs'"/>
+         </xsl:call-template>
+
          <!-- author facet -->
          <xsl:call-template name="facet">
             <xsl:with-param name="field" select="'facet-author'"/>
