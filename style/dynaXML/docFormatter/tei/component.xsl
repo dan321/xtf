@@ -656,6 +656,14 @@
    <!-- ====================================================================== -->
    <!-- References                                                             -->
    <!-- ====================================================================== -->
+   <!-- added support for http hyperlinks for VMCP (overriding the template below) -->
+   <xsl:template match="*:ref[matches(@target, '^https?://')]">
+   	<xsl:element name="a">
+   		<xsl:attribute name="href" select="@target"/>
+   		<xsl:apply-templates/>
+   	</xsl:element>
+   </xsl:template>
+   
    
    <xsl:template match="*:ref">
       
