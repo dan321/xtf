@@ -414,7 +414,7 @@
    		<xsl:for-each select="self::*[not(preceding-sibling::*)]/ancestor::*:note">
    			<xsl:variable name="note-id" select=" concat('note-', (@n, generate-id())[1] ) "/>
    			<xsl:variable name="note-marker" select=" (@n, '*')[1] "/>
-   			<span class="note-label" id="{$note-id}"><xsl:value-of select="$note-marker"/> </span>
+   			<span class="note-label" id="{$note-id}"><xsl:value-of select="$note-marker"/><xsl:text> </xsl:text></span>
    		</xsl:for-each>
       	      	<xsl:apply-templates/>
       	 </xsl:element>
