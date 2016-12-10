@@ -99,7 +99,14 @@ margin-bottom: 0;
 /* tab spaces */
 SPAN.tab {
 	display: inline-block;
-	width: 8em;
+	width: 6em;
+	height: 1em;
+	font-size: 0.8em;
+	vertical-align: text-bottom;
+	background-color: white;
+	border-color: darkcyan;
+	border-style: solid;
+	border-width: 1px;
 }
 
 /* display class names (for VMCP project) */
