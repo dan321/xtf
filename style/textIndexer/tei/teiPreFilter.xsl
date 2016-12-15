@@ -358,6 +358,12 @@
    
    <!-- identifier --> 
    <xsl:template name="get-tei-identifier">
+   	<!-- added facet for VMCP -->
+   	<xsl:for-each select="//*:fileDesc/*:publicationStmt/*:idno">
+   		<xsl:element name="facet-filename" use-attribute-sets="facet-attributes">
+   			<xsl:value-of select="replace(., '/', '::')"/>
+   		</xsl:element>
+   	</xsl:for-each>
       <xsl:choose>
          <xsl:when test="//*:fileDesc/*:publicationStmt/*:idno">
             <identifier xtf:meta="true" xtf:tokenize="no">

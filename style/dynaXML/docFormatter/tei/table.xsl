@@ -41,7 +41,8 @@
       </xsl:if>
       
       <xsl:element name="table">
-         <xsl:copy-of select="@*"/>
+         <xsl:copy-of select="@*"/><!-- bogus since TEI attributes such as @n should not be present on HTML table -->
+         <xsl:attribute name="class">table</xsl:attribute>
          <xsl:choose>
             <xsl:when test="@border"/>
             <xsl:otherwise>

@@ -110,17 +110,35 @@ SPAN.tab {
 }
 
 /* display class names (for VMCP project) */
+TABLE.table {
+	margin-left: 9em;
+}
+TABLE.table P {
+	margin-left: 0;
+	position: static;
+}
 P {
 	margin-left: 9em;
 	padding: 0.25em;
 	/*background-color: #F2F2F2;*/
 	position: relative;
 }
+TABLE.table P::before {
+	display: block;
+	position: static;
+	margin-right: 0;
+	margin-left: 0;
+	padding-right: 0;
+	text-align: left;
+	width: 100%;
+	padding-bottom: 0.5em;
+}
 P::before {
 	display: block;
 	position: absolute;
 	content: attr(class);
-	color: #222222;
+	color: darkgrey;
+	/*color: #222222;*/
 	font-weight: bold;
 	font-style: italic;
 	font-family: sans-serif;

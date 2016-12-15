@@ -129,6 +129,13 @@
             <xsl:with-param name="sort" select="'totalDocs'"/>
          </xsl:call-template>
 
+         <!-- identifier facet -->
+         <xsl:call-template name="facet">
+            <xsl:with-param name="field" select="'facet-filename'"/>
+            <xsl:with-param name="topGroups" select="'*'"/>
+            <xsl:with-param name="sort" select="'value'"/>
+         </xsl:call-template>
+
          <!-- styles facet -->
          <xsl:call-template name="facet">
             <xsl:with-param name="field" select="'facet-styles'"/>
@@ -164,6 +171,15 @@
          -->
          <xsl:call-template name="facet">
             <xsl:with-param name="field" select="'facet-validity'"/>
+            <xsl:with-param name="topGroups" select="'*[1-5]'"/>
+            <xsl:with-param name="sort" select="'totalDocs'"/>
+         </xsl:call-template>
+         
+         <!-- status facet, normally shows top 10 sorted by count, but user can select 'more' 
+              to see all sorted by subject. 
+         -->
+         <xsl:call-template name="facet">
+            <xsl:with-param name="field" select="'facet-status'"/>
             <xsl:with-param name="topGroups" select="'*[1-5]'"/>
             <xsl:with-param name="sort" select="'totalDocs'"/>
          </xsl:call-template>

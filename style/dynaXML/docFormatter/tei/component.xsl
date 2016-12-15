@@ -652,6 +652,12 @@
    <xsl:template match="*:space[@dim='horizontal'][@extent='tab']">
    	<span class="tab"><xsl:value-of select="codepoints-to-string(9)"/></span>
    </xsl:template>
+   <xsl:template match="*:space[@dim='vertical'][@unit='lines']">
+   <!-- TODO handle quantity
+ 	<xsl:variable name="lines" select="if @quantity then number(@quantity) else 1"/>
+ 	-->
+	<br/>
+   </xsl:template>
    
    <!-- ====================================================================== -->
    <!-- References                                                             -->

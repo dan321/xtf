@@ -303,7 +303,9 @@
                            <xsl:if test="not($smode='showBag')">
                               <td class="facet">
                               	<!-- VMCP includes these new facets -->
+                              	<xsl:apply-templates select="facet[@field='facet-filename']"/>
                               	<xsl:apply-templates select="facet[@field='facet-validity']"/>
+                              	<xsl:apply-templates select="facet[@field='facet-status']"/>
                               	<xsl:apply-templates select="facet[@field='facet-author']"/>
                               	<xsl:apply-templates select="facet[@field='facet-features']"/>
                               	<xsl:apply-templates select="facet[@field='facet-styles']"/>
