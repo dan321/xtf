@@ -197,6 +197,7 @@
    			<xsl:attribute name="class" select="."/>
    		</xsl:for-each>
    		<xsl:copy-of select="@style"/>
+   		<xsl:if test="*:space"><xsl:comment>space:</xsl:comment></xsl:if>
    		<xsl:apply-templates/>
    	</xsl:element>
    </xsl:template>
@@ -648,7 +649,15 @@
    <xsl:template match="*:lb">
       <br/>
    </xsl:template>
-   
+   <xsl:template match="*:space[@unit='chars'][@quantity]">
+   	<xsl:element name="span">
+   		<xsl:attribute name="class">space</xsl:attribute>
+   		<xsl:for-each xmlns:xs="http://www.w3.org/2001/XMLSchema" select="1 to xs:integer(@quantity)">
+			<!-- non-breaking space -->
+			<xsl:text> </xsl:text>
+		</xsl:for-each>
+	</xsl:element>
+   </xsl:template>   
    <xsl:template match="*:space[@dim='horizontal'][@extent='tab']">
    	<span class="tab"><xsl:value-of select="codepoints-to-string(9)"/></span>
    </xsl:template>
@@ -657,6 +666,9 @@
  	<xsl:variable name="lines" select="if @quantity then number(@quantity) else 1"/>
  	-->
 	<br/>
+   </xsl:template>
+   <xsl:template match="*:space">
+   	<xsl:comment>space</xsl:comment>
    </xsl:template>
    
    <!-- ====================================================================== -->
