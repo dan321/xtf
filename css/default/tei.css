@@ -109,6 +109,9 @@ SPAN.tab {
 	border-width: 1px;
 }
 
+TD {
+	vertical-align: top;
+}
 /* display class names (for VMCP project) */
 TABLE.table {
 	margin-left: 9em;
