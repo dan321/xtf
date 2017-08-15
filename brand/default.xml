@@ -1,39 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <brand xmlns="http://www.w3.org/1999/xhtml">
-   
-   <links>
-      <link rel="stylesheet" href="css/default/results.css" type="text/css"/>
-	  <link rel="shortcut icon" href="icons/default/favicon.ico" />
-   </links>
-   
-   <dynaxml.links>
-      <link rel="stylesheet" href="css/default/content.css" type="text/css"/>
-      <link rel="shortcut icon" href="icons/default/favicon.ico" />
+	
+	<links>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" media="screen" href="http://adc.library.usyd.edu.au/screens/styles/screen.css" type="text/css"/>
+		<link rel="stylesheet" media="screen" href="http://adc.library.usyd.edu.au/screens/styles/screen-local.css" type="text/css"/>
+		<link rel="stylesheet" media="screen" href="http://adc.library.usyd.edu.au/screens/styles/local-phoenix.css" type="text/css"/>
+		<link rel="stylesheet" media="print" type="text/css" href="http://adc.library.usyd.edu.au/screens/styles/print.css"/>
+		<link rel="stylesheet" href="http://adc.library.usyd.edu.au/screens/styles/milkbox/milkbox.css" type="text/css" media="screen" />
+	</links>
+	
+	<dynaxml.links>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" media="screen" href="http://adc.library.usyd.edu.au/screens/styles/screen.css" type="text/css"/>
+		<link rel="stylesheet" media="screen" href="http://adc.library.usyd.edu.au/screens/styles/screen-local.css" type="text/css"/>
+		<link rel="stylesheet" media="screen" href="http://adc.library.usyd.edu.au/screens/styles/local-phoenix.css" type="text/css"/>
+		<link rel="stylesheet" media="print" type="text/css" href="http://adc.library.usyd.edu.au/screens/styles/print.css"/>
+		<link rel="stylesheet" href="http://adc.library.usyd.edu.au/screens/styles/milkbox/milkbox.css" type="text/css" media="screen" />
+	</dynaxml.links>
+	
+	<page name="home" title="Australian Digital Collections">
+		<h1>Australian Digital Collections</h1>
+		<p>Welcome to the University of Sydney Library's collection of Australian Literary and Historical Texts. The texts are encoded according to the Text Encoding Initiative's guidelines for text encoding and interchange. The collection has been growing since 1997 with funding from a number of national grants and institutional collaborations...<a href="?page=about">More</a></p>
 
+		<h2>Introduction by Elizabeth Webby</h2>
+		
+		<p>This collection of Australian fiction, poetry, plays and non-fictional works, which has been put 
+		together from a number of different sources, ranging from a seventeenth-century Portuguese account of the 
+		discovery of Australia to the novels which make up Henry Handel Richardson's trilogy <i>The Fortunes of 
+		Richard Mahony</i>... <a href="search?page=introduction">More</a>
+		</p>
+		
+		<br />
+		<p>
+			<strong>The Australian Digital Collections comprise the following special 
+					interest collections which may be browsed and searched separately. </strong>
+		</p>
+		<h1>collections</h1>
+		<ul class="news">
+			<li>
+				<h2>
+					<a href="search?brand=acdp&amp;page=home">The Australian Cooperative Digitisation Project</a>
+				</h2>
+				<a href="search?brand=acdp&amp;page=home">
+					<img src="collections/ozlit/images/australian_digitisation_coop_small.jpg" alt="Description of image" class="news-photo" />
+				</a>
+				<p>Literary emergence in the 1840's.</p>
+			</li>
+			<li>
+				<h2>
+					<a href="search?brand=ozfed&amp;page=home">Australian Federation Full Text Database</a>
+				</h2>
+				<a href="search?brand=ozfed&amp;page=home">
+					<img src="collections/ozlit/images/australian_federation_small.jpg" alt="Description of image" class="news-photo" />
+				</a>
+				<p>National debates and auxiliary writings of the 1890's, introduced by Helen Irving.</p>
+			</li>
+			<li>
+		
+				<h2>
+					<a href="search?brand=ozpoets&amp;page=home">Australian Poets. Brennan, Harford, Slessor</a>
+				</h2>
+				<a href="search?brand=ozpoets&amp;page=home">
+					<img src="collections/ozlit/images/australian_poets_small.jpg" alt="Description of image" class="news-photo" />
+				</a>
+				<p>Three major twentieth century poets, introduced by John Trantor.</p>
+			</li>
+			<li>
+				<h2>
+					<a href="search?brand=ozlaw&amp;page=home">Classic Texts in Australian and International Taxation Law</a>
+				</h2>
+				<a href="search?brand=ozlaw&amp;page=home">
+					<img src="collections/ozlit/images/taxation_law_small.jpg" alt="Description of image" class="news-photo" />
+				</a>
+				<p>R.W. Parsons seminal work and other texts.</p>
+			</li>
+			<li>
+		
+				<h2>
+					<a href="search?brand=ozfleet&amp;page=home">First Fleet and Early Settlement</a>
+				</h2>
+				<a href="search?brand=ozfleet&amp;page=home">
+					<img src="collections/ozlit/images/firstfleet_small.jpg" alt=" " class="news-photo" />
+				</a>
+				<p>Manuscripts and published journals of the First Fleet.</p>
+			</li>
+			<li>
+				<h2>
+					<a href="search?brand=anderson&amp;page=home">The John Anderson Archive</a>
+				</h2>
+				<a href="search?brand=anderson&amp;page=home">
+					<img src="collections/ozlit/images/anderson_small.jpg" alt="Description of image" class="news-photo" />
+				</a>
+				<p>Manuscripts from the Archives.</p>
+			</li>
+			<li>
+				<h2>
+					<a href="search?brand=maiden&amp;page=home">Joseph Henry Maiden Botanical Texts</a>
+				</h2>
+				<a href="search?brand=maiden&amp;page=home">
+					<img src="collections/ozlit/images/jhmaiden_botanical_text_small.jpg" alt="Description of image" class="news-photo" />
+				</a>
+				<p>Pioneering botanical texts and images.</p>
+			</li>
+			<li>
+		
+				<h2>
+					<a href="search?brand=ozexplore&amp;page=home">Journals of Inland Exploration</a>
+				</h2>
+				<a href="search?brand=ozexplore&amp;page=home">
+					<img src="collections/ozlit/images/journal_inland_exploration_small.jpg" alt="Description of image" class="news-photo" />
+				</a>
+				<p>Major encounters with the new geography.</p>
+			</li>
+		</ul>
+	</page>
+	
+	<page name="introduction" title="Introduction to the ACDP">
+		<h2>Introduction by Elizabeth Webby</h2>
+		
+		<p>This collection of Australian fiction, poetry, plays and non-fictional works, which has been put together from a number of different sources, ranging from a seventeenth-century Portuguese account of the discovery of Australia to the novels which make up Henry Handel Richardson's trilogy <i>The Fortunes of Richard Mahony</i>, first published in the 1910s and 1920s.  Because of the need for all the texts to be out of copyright, a few significant literary works from the period through to 1920 are not included, most notably Miles Franklin s <i>My Brilliant Career</i> (1901) and poems by Mary Gilmore.  All the other leading Australian literary figures from the nineteenth and early twentieth century are, however, well represented.  </p>
+		
+		<p>The site includes comprehensive collections of the poems of Banjo Paterson, Henry Kendall, Adam Lindsay Gordon. Ada Cambridge, Lesbia Harford and Christopher Brennan.  Other poets represented include Barron Field, William Charles Wentworth, Charles Harpur, Henry Parkes, George Gordon McCrae, Henry and Louisa Lawson, C J Dennis, Marie Pitt and Mary Hannay Foott.   While the very prolific novelists of this period are mainly represented at present by only one or two texts, most of the novels of Henry Handel Richardson and the stories of Henry Lawson are included.  So are such other canonical novels as Marcus Clarke's <i>For the Term of His Natural Life</i>, Rolf Boldrewood's <i>Robbery Under Arms</i>, and Joseph Furphy s <i>Such is Life</i>.  It is possible to teach a course on nineteenth-century Australian Literature entirely from the texts included in the SETIS collection, and this is already being done by Dr Cath Ellis from the University of Wollongong.</p>
+		
+		<p>Among the non-fictional works are both of Watkin Tench's wonderful accounts of the first years of English settlement at Sydney, the record of the debates at the 1890 Australasian Federation Conference, Raffaello Carboni's highly entertaining contemporary account of the Eureka Stockade, Frederick Sinnett's &quot;The Fiction Fields of Australia&quot;, the first major critical piece on Australian novels, and Philip E Muskett's classic <i>The Art of Living in Australia.</i></p>
+		
+		<p>A particularly significant feature of this collection is that all the texts are searchable as well as available free on line to anyone who wishes to access them.  This therefore makes the SETIS site of prime importance to anyone carrying out any form of research relating to life in Australia during the nineteenth and earlier twentieth century.  I recently made good use of it while researching my chapter on reading in Australia from 1788 - 1890 for volume 1 of the forthcoming <i>History of the Book in Australia</i>.  We have been using it as well as part of the assessment for  the Australian Studies 2001 unit &quot;Australia: Land and Nation&quot; as it provides an excellent way for students to have access to different representations of the Australian landscape and of Indigenous Australians.</p>
+		
+		<p>Elizabeth Webby
+		<br />Professor of Australian Literature
+		<br />4th April 2001</p>
+	</page>	
+	
+	<page name="about" title="About">
+	
+		<h2>About the Australian Digital Collections</h2>
+		
+		<br></br>
+		
+		
+		<ul>
+			<li>
+				<a href="#back">History and background</a>
+			</li>
+			<li>
+				<a href="#enc">Text encoding standards</a>
+			</li>
+			<li>
+				<a href="#tech">Technology for search and presentation</a>
+			</li>
+			<li>
+				<a href="#ack">Acknowledgements</a>
+			</li>
+			<li>
+				<a href="#copy">Copyright</a>
+			</li>
+			<li>
+				<a href="#terms">Conditions of use</a>
+			</li>
+		
+		</ul>
+		
+		
+		<h3>
+			<a name="back">History and background</a>
+		</h3>
+		<p>The collection has been growing since 1997 with funding from a number of national grants and institutional 
+		 collaborations.  Between 1997 and July 2010, content management and development was overseen by Dr. Creagh Cole,
+		 Coordinator of the Sydney Electronic Text and Image Service (SETIS). </p>
+		
+		<h3>
+			<a name="enc">Text encoding standards</a>
+		</h3>
+		<p>Textual content is encoded using P5 guidelines of the <a href="http://www.tei-c.org/index.xml">Text Encoding Initiative (TEI)</a>.
+		Technical conversion from an earlier TEI standard was undertaken by Conal Tuohy.</p>
+		
+		<h3>
+			<a name="tech">Technology for search and presentation</a>
+		</h3>
+		<p>In 2010, the University of Sydney Library adopted the <a href="http://www.cdlib.org/services/publishing/tools/xtf/index.html">eXtensible Text Framework (XTF)</a> for collection search and 
+		presentation.  Technical development was undertaken by Rowan Brownlee using Extensible Stylesheet Language 
+		Transformations (XSLT) and Java Server Pages (JSP).  Graphic design was provided by Rebecca Goldsworthy, 
+		with CSS and HTML by Gaith Bader.</p>
+		
+		
+		<h3>
+			<a name="ack">Acknowledgements</a>
+		</h3>
+		<p>The following institutions have provided texts and support for the advancement of this project:</p>
+		
+		
+		<ul>
+			<li>Australian Cooperative Digitisation Project 1840-45</li>
+			<li>Macquarie Dictionary Ozcorp Database</li>
+			<li>Scholarly Editions Centre at the Australian Defence Forces Academy, Canberra.</li>
+			<li>State Library of New South Wales</li>
+			<li>Vicnet Ozlit Web Site at the Victorian State Library</li>
+			<li>Scholars Centre, University of Western Australia</li>
+			<li>AustLit: The Resource for Australian Literature</li>
+		</ul>
+		  
+		
+		<p>In addition, a number of individuals have contributed
+			 important texts to the collection:</p>
+		
+		<ul>
+			<li>Alan Light (Vicnet and <a href="http://promo.net/pg/">Project Gutenberg</a>)</li>
+			<li>Chris Floyd (WA)</li>
+		</ul>
+		
+		<h3>
+			<a name="copy">Copyright</a>
+		</h3>
+		<p>The University of Sydney Library reserves copyright of these electronic publications. </p>
+		<p>We have made every effort to ensure that the print publications upon which these files have been based are free of copyright. If you have information which suggests otherwise, do not hesitate to let us know.</p>
+		
+		<h3>
+			<a name="terms">Conditions of use</a>
+		</h3>
+		<p>By their use of these texts, users agree to follow our conditions of use: </p>
+		<ul>
+			<li>The texts and images may not be used for any commercial purpose without permission from the University of Sydney Library.</li>
+			<li>The texts are not to be mounted on another server for public or commercial access without permission. Links may, of course, be made from other sites to this site, subject to our conditions of use. </li>
+		</ul>
 
-   </dynaxml.links>
-   
-   <header>
-      <div class="header">
-         <img src="icons/default/xtf_logo.gif" alt="eXtensible Text Framework" class="xtf-logo"/>
-         <img src="icons/default/your_logo.gif" width="100" height="40" alt="graphic" class="your-logo" />
-         <br class="clear" />
-      </div>
-   </header>
-   
-   <dynaxml.header>
-      <div class="header">
-         <img src="icons/default/xtf_logo.gif" alt="eXtensible Text Framework" class="xtf-logo"/>
-         <img src="icons/default/your_logo.gif" width="100" height="40" alt="graphic" class="your-logo" />
-         <br class="clear" />
-      </div>
-   </dynaxml.header>
-   
-   <footer>
-      <div class="footer">
-         <a href="mailto:you@yourserver.com">Comments? Questions?</a> | <a href="javascript://" onclick="javascript:window.open('/xtf/search?smode=getLang','popup','width=500,height=200,resizable=no,scrollbars=no')">Choose Language</a>
-      </div>
-   </footer>
-   
+	</page>
+	
+	
+	<page name="contact" title="Contact">
+		<h1>Contact</h1>
+		<p>Your contact details</p>
+	</page>
+	
+	<header>
+		<!-- Google Tag Manager -->
+		<noscript>
+			<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PHK72C" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-PHK72C');</script>
+		<!-- End Google Tag Manager -->
+		<div id="topheader" class="topheader">
+			<div id="topheader" class="topheader">
+				<ul>
+					<li>
+						<a href="http://www.library.usyd.edu.au/" title="Library">Library</a>
+					</li>
+					<li>
+						<a href="https://myuni.sydney.edu.au" title="My Uni">My Uni</a>
+					</li>
+					<li>
+						<a href="http://intranet.sydney.edu.au" title="Staff Intranet">Staff Intranet</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<dynaxml.header>
+		<div class="header">
+			<h3 align="left">&#160;&#160;&#160;&#160;Australian Digital Collections</h3>
+			<br class="clear" />
+		</div>
+	</dynaxml.header>
+	
+	<footer>
+        <!-- start footer -->
+		<div id="foot" class="clearfix no-sitemap">
+			<div id="legal">
+				<p>© 2002-15 The University of Sydney</p>
+				<p>
+					<strong>ABN:</strong>&#160;15&#160;211&#160;513&#160;464. <strong>CRICOS
+                    number:</strong>&#160;00026A. <strong>Phone:</strong>&#160;+61 2 9351 2222. </p>
+				<p>
+					<strong>Authorised&#160;by:</strong>&#160; University of Sydney Librarian. </p>
+				<p id="foot-links">
+					<a href="http://sydney.edu.au/contact.shtml">Contact the University</a> | <a href="http://sydney.edu.au/disclaimer.shtml">Disclaimer</a> | <a href="http://sydney.edu.au/privacy.shtml">Privacy</a> | <a href="http://sydney.edu.au/accessibility.shtml">Accessibility</a>
+				</p>
+			</div>
+		</div>
+        <!-- end footer -->
+		<script src="http://stats.usyd.edu.au/__utm.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/mootools.js"/>
+		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/overlay.js"/>
+		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/milkbox.js"/>
+		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/common.js"/>
+	</footer>
+
 </brand>
