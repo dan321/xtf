@@ -129,18 +129,18 @@
 													<a href="#">Search</a>
 													<ul>
 														<li>
-															<a href="http://adc.library.usyd.edu.au/search?database=">Keywords</a>
+															<a href="search?database=">Keywords</a>
 														</li>
 														<li>
-															<a href="http://adc.library.usyd.edu.au/search?smode=advanced&amp;database=">Advanced</a>
+															<a href="search?smode=advanced&amp;database=">Advanced</a>
 														</li>
 													</ul>
 												</li>
 												<li>
-													<a href="http://adc.library.usyd.edu.au/index.jsp?database=&amp;content=collections%2fozlit%2ftext%2fabout.html">About</a>
+													<a href="search?page=about">About</a>
 												</li>
 												<li>
-													<a href="http://adc.library.usyd.edu.au/index.jsp?database=&amp;content=collections%2fozlit%2ftext%2fcontact.html">Contact</a>
+													<a href="search?page=contact">Contact</a>
 												</li>
 											</ul>
 										</dd>
