@@ -229,8 +229,8 @@
 	
 	
 	<page name="contact" title="Contact">
-		<h1>Contact</h1>
-		<p>Your contact details</p>
+		<h3>Contact</h3>
+		<p>For more information about the Australian Digital Collections, contact <a href="http://sydney.edu.au/library/contacts/staff/contacts.php?name=Sten%20Christensen">Sten Christensen</a>.</p>
 	</page>
 	
 	<header>
