@@ -117,11 +117,11 @@
 															<a href="search?database=&amp;collection=&amp;browse-creator=first&amp;sort=creator">Author</a>
 														</li>
 														<li>
-															<a href="http://adc.library.usyd.edu.au/search?database=&amp;collection=&amp;browse-title=first&amp;sort=title">Title</a>
+															<a href="search?database=&amp;collection=&amp;browse-title=first&amp;sort=title">Title</a>
 														</li>
 														
 														<li>
-															<a href="http://adc.library.usyd.edu.au/search?database=&amp;collection=&amp;browse-all=yes&amp;sort=title">All</a>
+															<a href="search?database=&amp;collection=&amp;browse-all=yes&amp;sort=title">All</a>
 														</li>
 													</ul>
 												</li>
@@ -152,11 +152,11 @@
 									</div>
 								</div>
 							</div>
-
+							<xsl:copy-of select="$brand.footer"/>
 						</div>
 					</div>
 				</div>
-				<xsl:copy-of select="$brand.footer"/>
+
 	
 			</body>
 		</html>
