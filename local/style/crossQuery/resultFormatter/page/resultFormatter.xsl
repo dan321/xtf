@@ -52,30 +52,8 @@
 					<div id="w2">
 						<div id="w3">
 							<div id="head">
-								<div id="masthead">
-									<a href="#content" class="skip-nav">Skip to main content</a>
-									<h1>
-										<a id="logo" href="http://sydney.edu.au/">The University of Sydney</a>
-										<span id="separator">-</span>
-										<span id="tag-line">Australian Digital Collections</span>
-									</h1>
-								</div>
-								<!-- Start global nav -->
-								<form id="search" action="">
-									<input type="hidden" name="page" value="home" />
-									<select name="brand">
-										<option value="ozlit">Select a collection</option>
-										<option value="acdp" label="Australian Cooperative Digitisation Project">The Australian Cooperative Digitisation Project</option>
-										<option value="ozfed" label="Australian Federation Full Text Database">Australian Federation Full Text Database</option>
-										<option value="ozpoets" label="Australian Poets. Brennan, Harford, Slessor">Australian Poets. Brennan, Harford, Slessor</option>
-										<option value="ozlaw" label="Classic Texts in Australian and International Taxation Law">Classic Texts in Australian and International Taxation Law&#160;&#160;&#160;&#160;&#160;&#160;</option>
-										<option value="ozfleet" label="First Fleet and Early Settlement">First Fleet and Early Settlement</option>
-										<option value="anderson" label="The John Anderson Archive">The John Anderson Archive</option>
-										<option value="maiden" label="Joseph Henry Maiden Botanical Texts">Joseph Henry Maiden Botanical Texts</option>
-										<option value="ozexplore" label="Journals of Inland Exploration">Journals of Inland Exploration</option>
-									</select>
-									<input type="submit" value="Go" class="button"/>
-								</form>
+								<xsl:call-template name="masthead"/>
+								<xsl:call-template name="collection-selector"/>
 								
 								<!-- breadcrumbs -->
 								<ul id="nav-global">
