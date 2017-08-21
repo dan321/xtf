@@ -63,7 +63,7 @@
                                     <xsl:variable name="bag" select="session:getData('bag')"/>
                                     
                                     
-                        <a href="{$xtfURL}{$crossqueryPath}?smode=showBag">My citations</a>
+                        <a href="{$crossqueryPath}?smode=showBag">My citations</a>
                         (<span id="bagCount"><xsl:value-of select="count($bag/bag/savedDoc)"/></span>)
                      </td>
                   </tr>
@@ -77,7 +77,7 @@
                         </xsl:choose>
                      </td>
                      <!--<td class="right">
-                        <a href="{$xtfURL}{$crossqueryPath}">
+                        <a href="{$crossqueryPath}">
                            <xsl:text>New Search</xsl:text>
                         </a>
                         <xsl:if test="$smode = 'showBag'">
@@ -215,7 +215,7 @@
    <div>
          <ul id="nav-global">
             <!-- use the "active" class to define an active item (highlighted text and nav indicator) -->
-            <li class="active"><a href="{$xtfURL}">Home</a></li>
+            <li class="active"><a href="">Home</a></li>
             <li><a href="http://sydney.edu.au/library/digital/">Digital Collections</a></li>
             <li><a href="http://escholarship.usyd.edu.au">Sydney eScholarship</a></li>
             <li><a href="http://sydney.edu.au/library">Library</a></li>
@@ -250,20 +250,20 @@
                </xsl:if>
                
                <xsl:if test="$smode != 'showBag'">
-                  <li><span><a href="{$xtfURL}{$crossqueryPath}?{$modifyString}">Modify Search</a></span></li>
+                  <li><span><a href="{$crossqueryPath}?{$modifyString}">Modify Search</a></span></li>
                </xsl:if>
                
-               <li><span><a href="{$xtfURL}search?database={$brand}"><span>Keyword search</span></a></span></li>
-               <li><span><a href="{$xtfURL}search?smode=advanced&amp;database={$brand}"><span>Advanced search</span></a></span></li>
-               <li><span><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title"><span>Browse</span></a></span>
+               <li><span><a href="search?database={$brand}"><span>Keyword search</span></a></span></li>
+               <li><span><a href="search?smode=advanced&amp;database={$brand}"><span>Advanced search</span></a></span></li>
+               <li><span><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title"><span>Browse</span></a></span>
                   <ul>
-                     <li><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-creator=first&amp;sort=creator">Author</a></li>
-                     <li><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-title=first&amp;sort=title">Title</a></li>
-                     <li><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title">All</a></li>
+                     <li><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-creator=first&amp;sort=creator">Author</a></li>
+                     <li><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-title=first&amp;sort=title">Title</a></li>
+                     <li><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title">All</a></li>
                   </ul> 
                </li>
-               <li><span><a href="{$xtfURL}index.jsp?database={$brand}&amp;collection={$collection}&amp;page=home"><span>Home</span></a></span></li>
-               <li><span><a href="{$xtfURL}index.jsp?database=&amp;content=collections%2fozlit%2ftext%2fcontact.html"><span>Contact</span></a></span></li>
+               <li><span><a href="index.jsp?database={$brand}&amp;collection={$collection}&amp;page=home"><span>Home</span></a></span></li>
+               <li><span><a href="index.jsp?database=&amp;content=collections%2fozlit%2ftext%2fcontact.html"><span>Contact</span></a></span></li>
             </ul>
             
             
@@ -328,7 +328,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
                                  <td colspan="2" class="right">
                                     <xsl:if test="$smode != 'showBag'">
                                        <xsl:variable name="bag" select="session:getData('bag')"/>
-                                       <strong><a href="{$xtfURL}{$crossqueryPath}?smode=showBag;database={$brand}">My citations</a></strong> (<span
+                                       <strong><a href="{$crossqueryPath}?smode=showBag;database={$brand}">My citations</a></strong> (<span
                                           id="bagCount"><xsl:value-of select="count($bag/bag/savedDoc)"/></span>) </xsl:if>
                                  </td>
                               </tr>
@@ -358,12 +358,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
                                  <!--<td class="right">
                                     <xsl:if test="$smode != 'showBag'">
                                        
-                                       <a href="{$xtfURL}{$crossqueryPath}?{$modifyString}">
+                                       <a href="{$crossqueryPath}?{$modifyString}">
                                           <xsl:text>Modify Search</xsl:text>
                                        </a>
                                        <xsl:text>&#160;|&#160;</xsl:text>
                                     </xsl:if>
-                                    <a href="{$xtfURL}{$crossqueryPath}?database={$brand}">
+                                    <a href="{$crossqueryPath}?database={$brand}">
                                        <xsl:text>New Search</xsl:text>
                                     </a>
                                     <xsl:if test="$smode = 'showBag'">
@@ -412,7 +412,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
                               <xsl:if test="docHit">
                                  <tr>
                                     <td>
-                                       <form method="get" action="{$xtfURL}{$crossqueryPath}">
+                                       <form method="get" action="{$crossqueryPath}">
                                           <b>Sorted by:&#160;</b>
                                           <xsl:call-template name="sort.options"/>
                                           <xsl:call-template name="hidden.query">
@@ -547,35 +547,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
             <xsl:when test="$brand = 'ozlit'"></xsl:when>
             <xsl:when test="$brand = 'acdp'">
                
-               <a href="{$xtfURL}index.jsp?database=acdp&amp;page=home">The Australian Cooperative Digitisation Project</a>
+               <a href="index.jsp?database=acdp&amp;page=home">The Australian Cooperative Digitisation Project</a>
             </xsl:when>
             <xsl:when test="$brand = 'ozfed'">
                <xsl:text> / </xsl:text>
-               <a href="{$xtfURL}index.jsp?database=ozfed&amp;page=home">Australian Federation Full Text Database</a>
+               <a href="index.jsp?database=ozfed&amp;page=home">Australian Federation Full Text Database</a>
             </xsl:when>
             <xsl:when test="$brand = 'ozpoets'">
                <xsl:text> / </xsl:text>
-               <a href="{$xtfURL}index.jsp?database=ozpoets&amp;page=home">Australian Poets. Brennan, Harford, Slessor</a>
+               <a href="index.jsp?database=ozpoets&amp;page=home">Australian Poets. Brennan, Harford, Slessor</a>
             </xsl:when>
             <xsl:when test="$brand = 'ozlaw'">
                <xsl:text> / </xsl:text>
-               <a href="{$xtfURL}index.jsp?database=ozlaw&amp;page=home">Classic Texts in Australian and International Taxation Law</a>
+               <a href="index.jsp?database=ozlaw&amp;page=home">Classic Texts in Australian and International Taxation Law</a>
             </xsl:when>
             <xsl:when test="$brand = 'ozfleet'">
                <xsl:text> / </xsl:text>
-               <a href="{$xtfURL}index.jsp?database=ozfleet&amp;page=home">First Fleet and Early Settlement</a>
+               <a href="index.jsp?database=ozfleet&amp;page=home">First Fleet and Early Settlement</a>
             </xsl:when>
             <xsl:when test="$brand = 'anderson'">
                <xsl:text> / </xsl:text>
-               <a href="{$xtfURL}index.jsp?database=anderson&amp;page=home">The John Anderson Archive</a>
+               <a href="index.jsp?database=anderson&amp;page=home">The John Anderson Archive</a>
             </xsl:when>
             <xsl:when test="$brand = 'maiden'">
                <xsl:text> / </xsl:text>
-               <a href="{$xtfURL}index.jsp?database=maiden&amp;page=home">Joseph Henry Maiden Botanical Texts</a>
+               <a href="index.jsp?database=maiden&amp;page=home">Joseph Henry Maiden Botanical Texts</a>
             </xsl:when>
             <xsl:when test="$brand = 'ozexplore'">
                <xsl:text> / </xsl:text>
-               <a href="{$xtfURL}index.jsp?database=ozexplore&amp;page=home">Journals of Inland Exploration</a>
+               <a href="index.jsp?database=ozexplore&amp;page=home">Journals of Inland Exploration</a>
             </xsl:when>
             <xsl:otherwise>             
             </xsl:otherwise>
@@ -602,7 +602,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
             <tr>
                <xsl:for-each select="$source-nodes[position() &lt; ($row-length + 1)]">
                   <td>
-                     <a href="{$xtfURL}{$crossqueryPath}?{$search-field}={.}">
+                     <a href="{$crossqueryPath}?{$search-field}={.}">
                         <xsl:value-of select="."/>
                      </a>
                   </td>
@@ -621,7 +621,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
             <tr>
                <xsl:for-each select="$source-nodes">
                   <td>
-                     <a href="{$xtfURL}{$crossqueryPath}?{$search-field}={.}">
+                     <a href="{$crossqueryPath}?{$search-field}={.}">
                         <xsl:value-of select="."/>
                      </a>
                   </td>
@@ -680,7 +680,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
          
          <ul id="nav-global">
             <!-- use the "active" class to define an active item (highlighted text and nav indicator) -->
-            <li class="active"><a href="{$xtfURL}">Home</a></li>
+            <li class="active"><a href="">Home</a></li>
             <li><a href="http://sydney.edu.au/library/digital/">Digital Collections</a></li>
             <li><a href="http://escholarship.usyd.edu.au">Sydney eScholarship</a></li>
             <li><a href="http://sydney.edu.au/library">Library</a></li>
@@ -708,20 +708,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
                </xsl:if>
                
                <xsl:if test="$smode != 'showBag'">
-                  <li><span><a href="{$xtfURL}{$crossqueryPath}?{$modifyString}">Modify Search</a></span></li>
+                  <li><span><a href="{$crossqueryPath}?{$modifyString}">Modify Search</a></span></li>
                </xsl:if>
                
-               <li><span><a href="{$xtfURL}search?database={$brand}"><span>Keyword search</span></a></span></li>
-               <li><span><a href="{$xtfURL}search?smode=advanced&amp;database={$brand}"><span>Advanced search</span></a></span></li>
-               <li><span><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title"><span>Browse</span></a></span>
+               <li><span><a href="search?database={$brand}"><span>Keyword search</span></a></span></li>
+               <li><span><a href="search?smode=advanced&amp;database={$brand}"><span>Advanced search</span></a></span></li>
+               <li><span><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title"><span>Browse</span></a></span>
                   <ul>
-                     <li><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-creator=first&amp;sort=creator">Author</a></li>
-                     <li><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-title=first&amp;sort=title">Title</a></li>
-                     <li><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title">All</a></li>
+                     <li><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-creator=first&amp;sort=creator">Author</a></li>
+                     <li><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-title=first&amp;sort=title">Title</a></li>
+                     <li><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title">All</a></li>
                   </ul> 
                </li>
-               <li><span><a href="{$xtfURL}index.jsp?database={$brand}&amp;collection={$collection}&amp;page=home"><span>Home</span></a></span></li>
-               <li><span><a href="{$xtfURL}index.jsp?database=&amp;content=collections%2fozlit%2ftext%2fcontact.html"><span>Contact</span></a></span></li>
+               <li><span><a href="index.jsp?database={$brand}&amp;collection={$collection}&amp;page=home"><span>Home</span></a></span></li>
+               <li><span><a href="index.jsp?database=&amp;content=collections%2fozlit%2ftext%2fcontact.html"><span>Contact</span></a></span></li>
             </ul>
             
             
