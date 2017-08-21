@@ -23,8 +23,255 @@
 
 
                
-               <!-- the following template was copied from the SETIS-customised XTF 2 resultFormatter.xsl stylesheet -->
+               <!-- the following templates were copied from the SETIS-customised XTF 2 resultFormatter.xsl stylesheet -->
+<xsl:template match="crossQueryResult" mode="browse" exclude-result-prefixes="#all">
+      
+      <xsl:variable name="alphaList" select="'A B C D E F G H I J K L M N O P Q R S T U V W Y Z OTHER'"/>
+      
+      <html xml:lang="eng" xmlns="http://www.w3.org/1999/xhtml" lang="eng">
+         <head>
+            
+            <!--            <script src="script/popup.js" type="text/javascript"/>-->
+            <title>
+               <xsl:value-of select="$brand.title"/>
+            </title>
+            <xsl:copy-of select="$brand.links"/>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <!-- AJAX support -->
+            <script src="script/yui/yahoo-dom-event.js" type="text/javascript"/>
+            <script src="script/yui/connection-min.js" type="text/javascript"/>
+         </head>
+         <body class="splash">
+            <div id="topheader" class="topheader"><div id="topheader" class="topheader"><ul><li><a href="http://www.library.usyd.edu.au/" title="Library">Library</a></li><li><a href="https://myuni.sydney.edu.au" title="My Uni">My Uni</a></li><li><a href="http://intranet.sydney.edu.au" title="Staff Intranet">Staff Intranet</a></li></ul></div></div>
+            <div id="w1">
+               <div id="w2">
+                  <div id="w3">
+                        <div id="head">
+                        	<xsl:call-template name="masthead"/>
+                        	<xsl:call-template name="collection-selector"/>
+                        	<xsl:call-template name="nav"/>
+                        	<xsl:call-template name="tabbar"/>
+                        </div>
+                     <div class="breadcrumb moved">
+                        <xsl:call-template name="setis-breadcrumb"/>
+                        
+                        <!-- result header -->
+                        <div class="resultsHeader">
+                           <table>
+                              <tr>
+                                 <td colspan="2" class="right">
+                                    <xsl:variable name="bag" select="session:getData('bag')"/>
+                                    
+                                    
+                        <a href="{$xtfURL}{$crossqueryPath}?smode=showBag">My citations</a>
+                        (<span id="bagCount"><xsl:value-of select="count($bag/bag/savedDoc)"/></span>)
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <b>Browse by:&#160;</b>
+                        <xsl:choose>
+                           <xsl:when test="$browse-title">Title</xsl:when>
+                           <xsl:when test="$browse-creator">Author</xsl:when>
+                           <xsl:otherwise>All Items</xsl:otherwise>
+                        </xsl:choose>
+                     </td>
+                     <!--<td class="right">
+                        <a href="{$xtfURL}{$crossqueryPath}">
+                           <xsl:text>New Search</xsl:text>
+                        </a>
+                        <xsl:if test="$smode = 'showBag'">
+                           <xsl:text>&#160;|&#160;</xsl:text>
+                           <a href="{session:getData('queryURL')}">
+                              <xsl:text>Return to Search Results</xsl:text>
+                           </a>
+                        </xsl:if>
+                     </td>-->
+                  </tr>
+                  <tr>
+                     <td>
+                        <b>Results:&#160;</b>
+                        <xsl:variable name="items" select="facet/group[docHit]/@totalDocs"/>
+                        <xsl:choose>
+                           <xsl:when test="$items &gt; 1">
+                              <xsl:value-of select="$items"/>
+                              <xsl:text> Items</xsl:text>
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:value-of select="$items"/>
+                              <xsl:text> Item</xsl:text>
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </td>
+                     <!--<td class="right">
+                        <xsl:text>Browse by </xsl:text>
+                        <xsl:call-template name="browseLinks"/>
+                     </td>-->
+                  </tr>
+                  <!--<tr>
+                     <td colspan="2" class="center">
+                        <xsl:call-template name="alphaList">
+                           <xsl:with-param name="alphaList" select="$alphaList"/>
+                        </xsl:call-template>
+                     </td>
+                  </tr>-->
+                  
+               </table>
+                        </div>
+                        </div>
+            
+            
+                     <!-- ( end tabs pane) -->
+                     <div id="mid" class="clearfix">
+                        <div id="content" class="withtoutabs nofeature nomenu">
+                           <div id="w4">
+                              <p align="center">
+                                 <xsl:call-template name="alphaList">
+                                    <xsl:with-param name="alphaList" select="$alphaList"/>
+                                    
+                                 </xsl:call-template>
+                                 
+                              </p>
+                              <br/>
+                              
+                              
+            
+            
+            
+            <!-- results -->
+<!--            <div class="results">-->
+            
+            <!--   For basic summary layout of authors in tabular format.  SETIS. RB. 03/03/10         -->
+            <div class="browse-results">
+               <!--<table>
+                  <tr>
+                     <td>-->
+                        <xsl:choose>
+                           <xsl:when test="$browse-title">
+                              <xsl:apply-templates select="facet[@field='browse-title']/group/docHit"/>
+                           </xsl:when>
+                           <xsl:otherwise>
+                           <!--  Display a table of author names, rather than a scrolling display.
+                           SETIS.  RB. 03/03/10-->
+                              
+                              <strong>Choose an author or browse alphabetically above</strong>
+                              
+                           <xsl:variable name="doc-list" select="facet[@field='browse-creator']/group/docHit"/>
+                           <xsl:variable name="creator" select="distinct-values($doc-list/meta/creator[not(.=following::creator)])"/>
+                           
+                              
+                              
+                           <table>
+                              <tbody>
+                                 <xsl:call-template name="render-table-row">
+                                    <xsl:with-param name="source-nodes" select="$creator"/>
+                                    <xsl:with-param name="row-length" select="4"/>
+                                    <xsl:with-param name="search-field" select="'creator'"/>
+                                 </xsl:call-template>
+                              </tbody>
+                           </table>
+                           <br/>
+                           <br/>
+                              
+                              
+<!--                              <xsl:apply-templates select="facet[@field='browse-creator']/group/docHit"/>-->
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     <!--</td>
+                  </tr>
+               </table>-->
+            </div>
+                           </div>
+                        </div>
+                        <!--   Footer     -->
+                        <xsl:copy-of select="$brand.footer"/>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--  Gaith's html          -->
+            <div style="display: none;" id="lbOverlay"/>
+            <div style="display: none;" id="lbCenter">
+               <div id="lbImage">
+                  <div style="position: relative;">
+                     <a href="#" id="lbPrevLink"/>
+                     <a href="#" id="lbNextLink"/>
+                  </div>
+               </div>
+            </div>
+            <div style="display: none;" id="lbBottomContainer">
+               <div id="lbBottom">
+                  <a href="#" id="lbCloseLink"/>
+                  <div id="lbCaption"/>
+                  <div id="lbNumber"/>
+                  <div style="clear: both;"/>
+               </div>
+            </div>
+         </body>
+      </html>
+   </xsl:template>
+
+   <xsl:template name="nav">
+   <div>
+         <ul id="nav-global">
+            <!-- use the "active" class to define an active item (highlighted text and nav indicator) -->
+            <li class="active"><a href="{$xtfURL}">Home</a></li>
+            <li><a href="http://sydney.edu.au/library/digital/">Digital Collections</a></li>
+            <li><a href="http://escholarship.usyd.edu.au">Sydney eScholarship</a></li>
+            <li><a href="http://sydney.edu.au/library">Library</a></li>
+            <li><a href="http://sydney.edu.au/">University Home</a></li>
+         </ul>
+         <!-- end global nav -->
+      </div>
+      </xsl:template>
+      
+      <xsl:template name="tabbar">
+<!--      <div id="tabbaroz">-->
+         <div id="tabbar">   
+         <!-- You add your tabbar items here if you want to there is an edited out example below -->
+         <!-- 
+            <ul id="tabs" class="horizontal">
+            <li class="active"> <span><a href="/">ozlit</a></span> </li>
+            </ul>
+         -->
+            
+            
+            <!--  RB. 08-02-11          -->
+            <xsl:variable name="modify" select="if(matches($smode,'simple')) then 'simple-modify' else 'advanced-modify'"/>
+            <xsl:variable name="modifyString" select="editURL:set($queryString, 'smode', $modify)"/>
+
+           <!-- TODO sort out what's the diff between $database (now replaced with $brand) and $collection? -->
+           <!-- in the meantime; I am making them the same unless $brand = 'default' -->
+           <xsl:variable name="collection" select="if ($brand = 'default') then '' else $brand"/>
+            
+            <ul id="tabs" class="horizontal">
+               <xsl:if test="$smode = 'showBag'">
+                  <li><span><a href="{session:getData('queryURL')}">Results</a></span></li>
+               </xsl:if>
                
+               <xsl:if test="$smode != 'showBag'">
+                  <li><span><a href="{$xtfURL}{$crossqueryPath}?{$modifyString}">Modify Search</a></span></li>
+               </xsl:if>
+               
+               <li><span><a href="{$xtfURL}search?database={$brand}"><span>Keyword search</span></a></span></li>
+               <li><span><a href="{$xtfURL}search?smode=advanced&amp;database={$brand}"><span>Advanced search</span></a></span></li>
+               <li><span><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title"><span>Browse</span></a></span>
+                  <ul>
+                     <li><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-creator=first&amp;sort=creator">Author</a></li>
+                     <li><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-title=first&amp;sort=title">Title</a></li>
+                     <li><a href="{$xtfURL}search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title">All</a></li>
+                  </ul> 
+               </li>
+               <li><span><a href="{$xtfURL}index.jsp?database={$brand}&amp;collection={$collection}&amp;page=home"><span>Home</span></a></span></li>
+               <li><span><a href="{$xtfURL}index.jsp?database=&amp;content=collections%2fozlit%2ftext%2fcontact.html"><span>Contact</span></a></span></li>
+            </ul>
+            
+            
+      </div>
+      <br/>     
+      </xsl:template>
+
+   
    <!-- ====================================================================== -->
    <!--   Replacement results template.                                        -->
    <!--   RB. SETIS. 07/07/10                                                  -->
@@ -43,6 +290,7 @@
                <xsl:value-of select="$brand.title"/>
             </title>
             <xsl:copy-of select="$brand.links"/>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
             <!-- AJAX support -->
             <script src="script/yui/yahoo-dom-event.js" type="text/javascript"/>
             <script src="script/yui/connection-min.js" type="text/javascript"/>
@@ -68,6 +316,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
 
 			<xsl:call-template name="masthead"/>
 			<xsl:call-template name="collection-selector"/>
+                        	<xsl:call-template name="nav"/>
+                        	<xsl:call-template name="tabbar"/>
 			</div>
 			<div class="breadcrumb moved">
                         <xsl:call-template name="setis-breadcrumb"/>
@@ -286,7 +536,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
    <xsl:template name="setis-breadcrumb">
          <span class="prefix">You are here: </span>
          <a href="search?page=home">Australian Digital Collections</a>
-         <xsl:if test="$brand">
+         <xsl:if test="$brand != 'default'">
          	<xsl:text> / </xsl:text>
          	<a href="search?database={$brand}&amp;page=home">
          		<xsl:value-of select="$brand.title"/>
@@ -333,6 +583,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
          -->
       
    </xsl:template>
+   
+   <!-- ====================================================================== -->
+   <!-- Recursive template for rendering rows of hyperlinks. SETIS. RB 03/03/10-->
+   <!-- ====================================================================== -->
+   <xsl:template name="render-table-row">
+      <xsl:param name="source-nodes"/>
+      <xsl:param name="row-length"/>
+      <xsl:param name="search-field"/>
+      
+      <xsl:variable name="num-nodes" select="count($source-nodes)"/>
+      
+      <!-- If there are nodes to process     -->
+      <xsl:if test="$num-nodes > 0">
+         <!--  If there are at least the same or more number of nodes available as the desired row length      -->
+         <xsl:if test="$num-nodes >= $row-length">
+            <!-- Write a row -->
+            <tr>
+               <xsl:for-each select="$source-nodes[position() &lt; ($row-length + 1)]">
+                  <td>
+                     <a href="{$xtfURL}{$crossqueryPath}?{$search-field}={.}">
+                        <xsl:value-of select="."/>
+                     </a>
+                  </td>
+               </xsl:for-each>
+            </tr>
+            <!--   Remove written nodes from the node set      -->
+            <xsl:variable name="pruned-nodes" select="$source-nodes[position() &gt; $row-length]"/>
+            <!--   Call the template with the reduced node set         -->
+            <xsl:call-template name="render-table-row">
+               <xsl:with-param name="source-nodes" select="$pruned-nodes"/>
+               <xsl:with-param name="row-length" select="$row-length"/>
+               <xsl:with-param name="search-field" select="$search-field"/>
+            </xsl:call-template>
+         </xsl:if>
+         <xsl:if test="$num-nodes &lt; $row-length">
+            <tr>
+               <xsl:for-each select="$source-nodes">
+                  <td>
+                     <a href="{$xtfURL}{$crossqueryPath}?{$search-field}={.}">
+                        <xsl:value-of select="."/>
+                     </a>
+                  </td>
+               </xsl:for-each>
+            </tr>
+         </xsl:if>
+      </xsl:if>
+   </xsl:template>   
    
    
    <!-- TODO the ozlit-header template is currently unused - remove it? -->
