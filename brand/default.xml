@@ -20,6 +20,8 @@
 		<link rel="stylesheet" href="http://adc.library.usyd.edu.au/screens/styles/milkbox/milkbox.css" type="text/css" media="screen" />
 	</dynaxml.links>
 	
+	<title>Australian Digital Collections</title>
+	
 	<page name="home" title="Australian Digital Collections">
 		<h1>Australian Digital Collections</h1>
 		<p>Welcome to the University of Sydney Library's collection of Australian Literary and Historical Texts. The texts are encoded according to the Text Encoding Initiative's guidelines for text encoding and interchange. The collection has been growing since 1997 with funding from a number of national grants and institutional collaborations...<a href="?page=about">More</a></p>
