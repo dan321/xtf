@@ -181,7 +181,7 @@
    
    <xsl:template name="simpleForm" exclude-result-prefixes="#all">
       
-      <form class="boxed noprint" method="get" action="{$xtfURL}{$crossqueryPath}">
+      <form class="boxed noprint" method="get" action="{$crossqueryPath}">
          <input type="hidden" name="smode" value="simple"/>
          <!--   Inclusion of database parameter prevents return to default display.  RB.  SETIS.  09/03/10    -->
          
@@ -191,8 +191,8 @@
          <xsl:text>&#160;</xsl:text>
          <input type="submit" class="button" value="Search"/>
          <!--   Inclusion of database parameter prevents return to default display.  RB.  SETIS.  09/03/10    -->
-         <!--<input type="reset" onclick="location.href='{$xtfURL}{$crossqueryPath}" value="Clear"/>-->
-         <input type="reset" onclick="location.href='{$xtfURL}{$crossqueryPath}'" class="button" value="Clear"/>
+         <!--<input type="reset" onclick="location.href='{$crossqueryPath}" value="Clear"/>-->
+         <input type="reset" onclick="location.href='{$crossqueryPath}'" class="button" value="Clear"/>
       </form>
       <table class="tabledata_blue">
          <tbody>
@@ -231,7 +231,7 @@
       <xsl:variable name="urlParams" select="editURL:remove(replace($http.URL, '.+search\?|.+oai\?', ''),'startDoc')"/>
 
       <!--   RB SETIS. 05/03/10.  Database and collection parameters added.   -->
-      <form class="boxed noprint" method="get" action="{$xtfURL}{$crossqueryPath}">
+      <form class="boxed noprint" method="get" action="{$crossqueryPath}">
          <table class="tabledata_blue">
             <tbody>
                <tr>
@@ -799,7 +799,7 @@
 
    <!-- free-form form -->
    <xsl:template name="freeformForm" exclude-result-prefixes="#all">
-      <form method="get" action="{$xtfURL}{$crossqueryPath}">
+      <form method="get" action="{$crossqueryPath}">
          <table>
             <tr>
                <td>
@@ -807,7 +807,7 @@
                   <input type="text" name="freeformQuery" size="40" value="{$freeformQuery}"/>
                   <xsl:text>&#160;</xsl:text>
                   <input type="submit" value="Search"/>
-                  <input type="reset" onclick="location.href='{$xtfURL}{$crossqueryPath}'" value="Clear"/>
+                  <input type="reset" onclick="location.href='{$crossqueryPath}'" value="Clear"/>
                </td>
             </tr>
             <tr>
