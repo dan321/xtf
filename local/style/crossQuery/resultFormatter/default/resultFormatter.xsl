@@ -21,6 +21,7 @@
                omit-xml-declaration="yes"
                exclude-result-prefixes="#all"/>
 
+               <xsl:variable name="icon.path" select=" 'icons/default/' "/>
 
                
                <!-- the following templates were copied from the SETIS-customised XTF 2 resultFormatter.xsl stylesheet -->
