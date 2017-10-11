@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<brand xmlns="http://www.w3.org/1999/xhtml">
+	
+	<title>Australian Federation Full Text Database</title>
+		
+	<page name="home" title="Australian Federation Full Text Database">
+		<div style="width: 736px; height: 205px; background-image: url(http://adc.library.usyd.edu.au/collections/ozfed/images/banner.jpg);"></div>
+		<h1>Australian Federation Full Text Database</h1>
+		<p><img align="left" src="http://setis.library.usyd.edu.au/fed/cfed_logo.gif" alt="federation_logo"/>Welcome to the 
+		Australian Federation Full-Text Database. Digital Conversion of the core collection was funded by the 
+		NSW Centenary of Federation in 2001. Digital reproduction of the works of Robert Garran has been 
+		undertaken with the kind permission of Mrs Win Garran, Deakin, ACT.</p>
+		<br clear="all"/>
+		<h2>Introduction by Helen Irving</h2>
+		
+		<p>When the Constitution's framers gave the Commonwealth powers over &quot;postal, 
+		telegraphic, telephonic, and other like services&quot;, in an era when the radio was still a utopian 
+		dream, they could not have imagined that  other like services  would come to include the internet.  
+		But, being High Victorians, they were all very excited by the prospects of scientific advancement and 
+		progress...<a href="?brand=ozfed&amp;page=introduction">More</a>
+		</p>	
+		<!-- descriptive metadata in COinS format -->
+		<span 
+			class="Z3988" 
+			title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.title=Australian+Federation+Full+Text+Database&amp;rft.creator=University+of+Sydney+Library&amp;rft.subject=federation%2C+labour+history%2C+politics&amp;rft.description=Welcome+to+the+Australian+Federation+Full-Text+Database.+Digital+Conversion+of+the+core+collection+was+funded+by+the+NSW+Centenary+of+Federation+in+2001.+Digital+reproduction+of+the+works+of+Robert+Garran+has+been+undertaken+with+the+kind+permission+of+Mrs+Win+Garran%2C+Deakin%2C+ACT.&amp;rft.publisher=University+of+Sydney+Library&amp;rft.type=text&amp;rft.format=text&amp;rft.identifier=http%3A%2F%2Fadc.library.usyd.edu.au%2Findex.jsp%3Fdatabase%3Dozfed%26page%3Dhome&amp;rft.language=en&amp;rft.rights=http%3A%2F%2Fsydney.edu.au%2Fdisclaimer.shtml">
+		</span>
+	</page>
+	
+	<page name="introduction" title="The Federation Full-Text Database">
+		<h2>The Federation Full-Text Database</h2>
+		
+		<h2>Introduction by Helen Irving</h2>
+		
+		<p>When the Constitution's framers gave the Commonwealth powers over &quot;postal, telegraphic, telephonic, and other like services&quot;, in an era when the radio was still a utopian dream, they could not have imagined that  other like services  would come to include the internet.  But, being High Victorians, they were all very excited by the prospects of scientific advancement and progress, and they would have been thrilled to know that their work would re-appear in the Centenary of its completion in such a  futuristic  form.  </p>
+		
+		<p>The digitisation of the key texts that record the making of the Australian Commonwealth is likely to be one of the most significant of all the projects to come out of the Centenary of Federation in 2001.  From the historian s perspective, it is a long-anticipated and exciting initiative. In recent years Federation history has blossomed, as the rich social and cultural dimensions of the Federation process have been identified, and their multiple layers added to the established political and legal dimensions. The digitisation of the Debates of the Federal Conventions of the 1890s will make it possible to expand this approach to our history in ways previously almost unimaginable. How many times were women, or churches, or American history, for example, discussed in the Debates? To be able to search thematically, identifying every use of the key words, across multiple volumes covering several thousand pages, is a thrilling prospect.  </p>
+		
+		<p>In addition, the debates of the crucial  people's  conferences, at Corowa and Bathurst, have been included, as well as a large selection of the writings of contemporaries of Federation.  Many of these works have hitherto been extremely difficult to access, some found only in rare books collections, and known only to a handful of researchers. Their diffusion to a worldwide audience will undoubtedly create a new interest in Federation and its actors, as well as a renewed respect for their dedication, their devotion to democracy, and their human qualities. </p>
+		
+		<p>Just as we today are grateful for the wonderful work of the Hansard reporters of the 1890s who recorded the Federation debates, Australians in the future will regard this digitisation project with immense gratitude. The Senate Research Office at Parliament House, the University of Sydney Library and NSW Centenary of Federation deserve the thanks of Australia's historians and public for this lasting Centenary contribution.</p>
+		
+		<p>Helen Irving,
+		<br/>Faculty of Law,
+		<br/>University of Sydney</p>
+</page>
+
+</brand>

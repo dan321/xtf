@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<brand xmlns="http://www.w3.org/1999/xhtml">
+	
+	<title>Classic Texts in Australian and International Taxation Law</title>
+		
+	<page name="home" title="Classic Texts in Australian and International Taxation Law">
+		<div style="width: 736px; height: 205px; background-image: url(http://adc.library.usyd.edu.au/collections/ozlaw/images/banner.jpg);"></div>
+		<h1>Classic Texts in Australian and International Taxation Law</h1>		
+		<p>Parson's text, <i>Income Taxation in Australia: Principles of Income, Deductibility and Tax Accounting</i> 
+		was published by the Law Book Company in 1985. It represented the culmination of over 25 years research and 
+		writing in the tax field...
+		<a href="?brand=ozlaw&amp;page=introduction">More</a>
+		
+		</p>	
+		<!-- descriptive metadata in COinS format -->
+		<span 
+			class="Z3988" 
+			title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.title=Classic+Texts+in+Australian+and+International+Taxation+Law+&amp;rft.creator=University+of+Sydney+Library&amp;rft.subject=law&amp;rft.description=Parson%27s+text%2C+Income+Taxation+in+Australia%3A+Principles+of+Income%2C+Deductibility+and+Tax+Accounting+was+published+by+the+Law+Book+Company+in+1985.+It+represented+the+culmination+of+over+25+years+research+and+writing+in+the+tax+field.&amp;rft.publisher=University+of+Sydney+Library&amp;rft.type=text&amp;rft.format=text&amp;rft.identifier=http%3A%2F%2Fadc.library.usyd.edu.au%2Findex.jsp%3Fdatabase%3Dozlaw%26page%3Dhome&amp;rft.language=en&amp;rft.rights=http%3A%2F%2Fsydney.edu.au%2Fdisclaimer.shtml">
+		</span>
+	</page>
+	
+	<page name="introduction" title="Classic Texts in Australian and International Taxation Law. Introduction by Richard Vann">
+		<h2>Classic Texts in Australian and International Taxation Law</h2>
+		
+		<h2>Introduction by Richard Vann</h2>
+		
+		
+		<p>Parson's text, <i>Income Taxation in Australia: Principles of Income, Deductibility and Tax Accounting</i> was published by the Law Book Company in 1985. It represented the culmination of over 25 years research and writing in the tax field. Copies of the text are now kept under lock and key by many owners for fear that they will disappear. It was the first text to be digitized in the current series and has been widely used by students, scholars, practitioners and tax officials since its appearance in 2001.</p>
+		
+		<p>Ross Parsons was also a key member of the Taxation Review Committee which produced its Final Report in 1975 (commonly known as the Asprey Report after the chair of the Committee). Parsons was the prime author of several chapters in this report which is widely regarded as the origin of much of the tax reform that has occurred in Australia over the last 25 years. For example, it recommended the implementation of a capital gains tax, imputation, and a GST. This text is difficult to obtain and the binding of most copies is disintegrating. Hence it has been digitized so that it can also be accessed online.</p>
+		
+		<p>Further as part of an international cooperative project the Ross Parson's Centre is digitising the League of Nations publications on tax treaties which are the origin of Australia's modern treaty network.</p>
+		
+		<p>Thanks are due to the following people: Creagh Cole of the University of Sydney Library for organising the preparation of the electronic texts; Margaret McAleese, Law Librarian for her help in bringing the project to fruition; Bridget Nguyen-Ngoc, Greg Sherington and Dat Nguyen of the Law School for doing the legwork to get the site up and running.</p>
+		
+		<p>Copyright permissions to reproduce the works on the site have been provided Marion Parsons and the Law Book Company (now part of the Thomson Reuters Group) for the Parsons text and by the Commonwealth of Australia for the Asprey Report.</p>
+		
+		<p>The Australian Research Council has provided funding through a Research Infrastructure Equipment and Facilities Grant for the development of this site.</p>
+		
+		<p>Richard Vann
+		<br></br>Challis Professor of Law
+		<br></br>University of Sydney
+		</p>
+</page>
+
+</brand>

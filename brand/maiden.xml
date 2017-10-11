@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<brand xmlns="http://www.w3.org/1999/xhtml">
+	
+	<title>Joseph Henry Maiden Botanical Texts</title>
+		
+	<page name="home" title="Joseph Henry Maiden Botanical Texts">
+		<div style="width: 736px; height: 205px; background-image: url(http://adc.library.usyd.edu.au/collections/maiden/images/banner.jpg);"></div>
+		<h1>Joseph Henry Maiden Botanical Texts</h1>		
+		<p>Pioneering botanical texts and images.</p>  	
+		<!-- descriptive metadata in COinS format -->
+		<span 
+			class="Z3988" 
+			title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.title=Joseph+Henry+Maiden+Botanical+Texts&amp;rft.creator=University+of+Sydney+Library&amp;rft.subject=botany&amp;rft.description=Pioneering+botanical+texts+and+images.&amp;rft.publisher=University+of+Sydney+Library&amp;rft.type=text&amp;rft.format=text&amp;rft.identifier=http%3A%2F%2Fadc.library.usyd.edu.au%2Findex.jsp%3Fdatabase%3Dmaiden%26page%3Dhome&amp;rft.language=en&amp;rft.rights=http%3A%2F%2Fsydney.edu.au%2Fdisclaimer.shtml">
+		</span>
+	</page>
+
+</brand>

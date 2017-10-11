@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<brand xmlns="http://www.w3.org/1999/xhtml">
+	
+	<title>First Fleet and Early Settlement</title>
+		
+	<page name="home" title="First Fleet and Early Settlement">
+		<div style="width: 736px; height: 205px; background-image: url(http://adc.library.usyd.edu.au/collections/ozfleet/images/banner.jpg);"></div>
+		<h1>First Fleet and Early Settlement</h1>
+		<p>This site is a joint Project with the <a href="http://www.sl.nsw.gov.au">State Library of NSW</a></p>
+		<p><a href="?brand=ozfleet&amp;page=slnsw">Titles listed at the State Library</a>    </p>
+		<!-- descriptive metadata in COinS format -->
+		<span 
+			class="Z3988" 
+			title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.title=First+Fleet+and+Early+Settlement&amp;rft.creator=University+of+Sydney+Library&amp;rft.subject=early+settlement%2C+exploration%2C+politics%2C+travel&amp;rft.description=This+site+is+a+joint+Project+with+the+State+Library+of+NSW&amp;rft.publisher=University+of+Sydney+Library&amp;rft.contributor=State+Library+of+New+South+Wales&amp;rft.type=text&amp;rft.format=text&amp;rft.identifier=http%3A%2F%2Fadc.library.usyd.edu.au%2Findex.jsp%3Fdatabase%3Dozfleet%26page%3Dhome&amp;rft.language=en&amp;rft.rights=http%3A%2F%2Fsydney.edu.au%2Fdisclaimer.shtml">
+		</span>
+	</page>
+	
+	<page name="slnsw" title="First Fleet and Early Settlement. Titles listed at the State Library of New South Wales">
+		<h2>Titles listed at the State Library of New South Wales</h2>
+		<ul>
+		<li>George Bouchier Worgan - Letter to Richard Worgan, 20 January 1788 - 11 July 1788 (c830/a1175)</li>
+		<li>John Easty - `Pt Jno  Easty A Memorandum of the Transa.. of a Vy Voiage from England to Botany Bay in The Scarborough...' (dl_spencer374/a1145)</li>
+		
+		<li>James Scott / Remark on a passage Botnay [sic] bay 1787 (ms_q43/a1142)</li>
+		<li>A Journal of a Voyage from Portsmouth to New South Wales and China in the Lady Penrhyn, Merchantman William Cropton Sever, Commander by Arthur Bowes, Smyth, Surgeon - 1787-1788 - 1789 (safe1_15/a1085)</li>
+		<li>Arthur Bowes Smyth - drawings from his journal (safe1_15/a604)</li>
+		
+		<li> Ralph Clark - journal kept on the Friendship during a voyage to Botany Bay and Norfolk Island ... (safe1_27/a262)</li>
+		<li>Jacob Nagle his Book A.D. One Thousand Eight Hundred and Twenty Nine May 19th. Canton. Stark County Ohio', 1775-1802, compiled 1829 (mss5954/a366)</li>
+		<li>Phillip Parker King - album of drawings and engravings, 1802-1829 (pxc767/a1084)</li>
+		<li> Fowell letters</li>
+		<li>William Bradley journal : A Voyage to New South Wales, December 1786 - May 1792 (safe1_14/a138)</li>
+		<li>William Bradley - drawings from the First Fleet journal titled `A Voyage to New South Wales (safe1_14/a157)</li>
+		<li>William Bradley - charts from the First Fleet journal titled 'A Voyage to New South Wales', December 1786 - May 1792 (safe1_14/a158)</li>
+		<li>William Bradley - maps from the First Fleet journal titled 'A Voyage to New South Wales', December 1786 - May 1792 (safe1_14/a160)</li>
+		<li>William Waterhouse - papers, 1782-1803  ( letters received by William Waterhouse from his son Henry Waterhouse)  (mss6544/a603)</li>
+		
+		<li>David Blackburn - papers relating to his service in New South Wales, 1788-1792 (mss6937/a591)</li>
+		<li>David Blackburn - letters received (2) from his sister Margaret Blackburn, 1785 &amp; 1789 (mss6937/a590)</li>
+		<li>Margaret Blackburn - letters received (14) from her brother David Blackburn, 1787-1791 (mss6937/a588)</li>
+		<li>David Blackburn - letters received by Richard Knight, 12 July 1788, 19 March 1791 (safe1_120/a587)</li>
+		<li>Blackburn family - miscellaneous papers, being mainly correspondence relating to David Blackburn's death, 1779-1796 (mss6937/a592)</li>
+		
+		</ul>
+</page>
+
+</brand>

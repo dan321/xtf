@@ -14,6 +14,27 @@
    <xsl:import href="spelling.xsl"/>
    
    <xsl:param name="brand.title" select="$brand.file//title/node()" xpath-default-namespace="http://www.w3.org/1999/xhtml"/>
+   
+   
+	<!-- local stylesheet overrides the XTF default to alter the behaviour of loading the "brand" xml file -->
+	<!-- In the base implementation, the 'default.xml' brand file is loaded when no "brand" parameter in the request URI -->
+	<!-- In this implementation, the 'default.xml' brand file also provides fallback values for links, header and footer,
+		if the named brand doesn't supply them (i.e. the named brands inherit links, header, and footer from default.xml) -->
+	<xsl:variable name="default-brand.file" select="document('../../../../../brand/default.xml')"/>
+	<xsl:variable name="brand.file">
+		<xsl:choose>
+			<xsl:when test="$brand != ''">
+				<xsl:copy-of select="document(concat('../../../../../brand/',$brand,'.xml'))"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:copy-of select="$default-brand.file"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:param name="brand.links" select="($brand.file//links, $default-brand.file//links)[1]/*" xpath-default-namespace="http://www.w3.org/1999/xhtml"/>
+	<xsl:param name="brand.header" select="($brand.file//header, $default-brand.file//header)[1]/*" xpath-default-namespace="http://www.w3.org/1999/xhtml"/>
+	<xsl:param name="brand.footer" select="($brand.file//footer, $default-brand.file//footer)[1]/*" xpath-default-namespace="http://www.w3.org/1999/xhtml"/>
+   
 
 	<xsl:template name="masthead">
 		<div id="masthead">

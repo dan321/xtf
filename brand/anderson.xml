@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<brand xmlns="http://www.w3.org/1999/xhtml">
+	
+	<title>The John Anderson Archive</title>
+
+		
+	<page name="home" title="The John Anderson Archive">
+		<div style="width: 736px; height: 205px; background-image: url(http://adc.library.usyd.edu.au/collections/anderson/images/banner.jpg);"></div>
+		<h1>The John Anderson Archive</h1>
+		<p>Welcome to the University of Sydney web site devoted to the work of John Anderson, Challis Professor of 
+Philosophy from 1927 until 1958. The site aims to provide a comprehensive resource for study and research 
+into the life and works of John Anderson. In addition to previously published works by Professor Anderson 
+the site presents electronic editions of significant papers held by the University Archives.</p>
+
+		<p>All Anderson resources accessed at this site have been created in accordance with the terms of the 
+Alexander John Anderson bequest and are presented here for private research and study only.  They form part 
+of the overall publication project initiated by the bequest and are held in copyright. 
+</p>
+
+		<h2>Introduction by D. M. Armstrong</h2>
+
+		<p>Anderson was the most important philosopher who has worked in Australia. A great educator, 
+he was a profound influence on the intellectual formation of those who were his pupils. These included, 
+but were far from being exhausted by, a number of students who went on to become philosophers 
+themselves...
+
+<a href="?brand=anderson&amp;page=introduction">More</a>
+
+		</p>
+
+		<h2>Sydney University Press Titles</h2>
+
+		<p>
+			<a href="http://sup.usyd.edu.au">Sydney University Press</a> has published a series of books 
+drawn from the lecture notes and other works relevant to Anderson's life 
+and teaching: 
+
+			<a href="?brand=anderson&amp;page=sup">List of current titles</a>
+
+		</p>
+
+		<h2>Acknowledgements  </h2>
+		<p>The Library would like to thank Dr Creagh McLean Cole for the considerable work he has done in the creation of the John Anderson Archive.  These webpages would not exist nor would Anderson’s personal library be housed within the University of Sydney Rare Book and Special Collections without his valuable efforts. </p>
+	</page>
+	
+	<page name="introduction" title="Introduction to the John Anderson Archive">
+		<h2>Introduction by D. M. Armstrong</h2>
+		<p>Anderson was the most important philosopher who has worked in
+		Australia. A great educator, he was a profound influence on the
+		intellectual formation of those who were his pupils. These included, but
+		were far from being exhausted by, a number of students who went on to
+		become philosophers themselves. An interesting biography of Anderson
+		which, however, is more concerned to give a portrait of the man and his
+		activities rather than consider the detail of his philosophical views,
+		is <b>A Passion to Oppose</b> by the historian Brian Kennedy (Melbourne
+		University Press, 1995). It contains a very full bibliography.</p>
+				<p>Anderson never wrote the books that he hoped to write, and of the
+		material he published in his life-time only the collection
+		<b>Studies in Empirical Philosophy</b>
+		is easily available. But many of those who have heard of the profound
+		intellectual indebtedness to Anderson that so many of his students have
+		expressed, and have wished to follow the matter up, have found these
+		papers heavy going. Some have even been led to wonder what the fuss was
+		all about.
+		</p>
+				<p>To such people, one has in the past been able to recommend two
+		excellent books by A.J. Baker: <b>Anderson's Social Philosophy</b>
+		(1979, Angus and Robertson) and <b>Australian Realism: The
+		Systematic Philosophy of John Anderson</b> (1986, Cambridge University
+		Press). One eminent Australian philosopher, Professor Jack Smart, whose
+		philosophical education was in Britain, told me in 2000 that he had just
+		read the second Baker book, how illuminating and interesting he had
+		found it, and that it had given him a new appreciation of Anderson.
+		Baker has for many years brought out a broadsheet <b>Heraclitus</b> (a
+		philosopher who Anderson took a particular interest in) which, among
+		other matters, contains a wealth of material about Anderson.</p>
+				<p>But now there is a new resource for those who wish to get to
+		grips with Anderson's extraordinarily wide-ranging yet systematic
+		thought: this web-site. What are so valuable here are many texts,
+		gradually becoming electronic texts, of Anderson's lectures. Anderson
+		dictated his lectures, but although he often used earlier material in
+		their composition he shaped that material anew as he went. What one got
+		in the lectures, therefore, was Anderson thinking about the particular
+		topic in hand. And arguably it is in these informal writings that the
+		form and pressure of Anderson's thought is best exhibited. To take down
+		dictation was to endure pedagogical passivity that runs completely
+		against all current ideas of education. But I do not think that we
+		begrudged it in any way. By this means we were being inducted into a
+		system of thought.</p>
+				<p>David Armstrong <br/>
+		Emeritus Professor of Philosophy <br/>
+		Sydney University <br/>
+		January 2001</p>
+			</page>
+			
+			<page name="sup" title="Sydney University Press Titles">
+			<h2>Sydney University Press Titles</h2>
+		
+		<p><img align="left"
+			src="collections/anderson/images/1920898085.jpg" alt="cover"/><a
+			href="http://purl.library.usyd.edu.au/sup/1920898085">Space-Time
+		and the Proposition</a><br/>
+		1944 Lectures on Samuel Alexander 1944 <br/>
+		Edited by Mark Weblin</p>
+		<br clear="all"/>
+		<p><img align="left"
+			src="collections/anderson/images/9781920898625.jpg" alt="cover"/><a
+			href="http://purl.library.usyd.edu.au/sup/9781920898625">Space Time
+		and the Categories: Lectures on Metaphysics 1949-50</a> <br/>
+		Edited by Creagh McLean Cole <br/>
+		Introduction by D. M. Armstrong</p>
+		<br clear="all"/>
+		<p><img align="left"
+			src="collections/anderson/images/1920898174.jpg" alt="cover"/><a
+			href="http://purl.library.usyd.edu.au/sup/1920898174">Studies in
+		Empirical Philosophy</a> <br/>
+		Articles selected by Anderson for publication in 1962</p>
+		<br clear="all"/>
+		<p><img align="left"
+			src="collections/anderson/images/9781920898816.jpg" alt="cover"/><a
+			href="http://purl.library.usyd.edu.au/sup/9781920898816">Lectures
+		on Political Theory 1941-45</a> <br/>
+		Edited by Creagh McLean Cole</p>
+		<br clear="all"/>
+		<p><img align="left"
+			src="collections/anderson/images/9781920898861.jpg" alt="cover"/><a
+			href="http://purl.library.usyd.edu.au/sup/9781920898861">Lectures
+		on Modern Philosophy: Hume, Reid and James 1932-35</a> <br/>
+		Edited by Creagh McLean Cole</p>
+		<br clear="all"/>
+		<p><img align="left"
+			src="collections/anderson/images/9781920899073.jpg" alt="cover"/><a
+			href="http://purl.library.usyd.edu.au/sup/9781920899073">Lectures
+		on Greek Philosophy 1928</a> <br/>
+		Edited by Creagh McLean Cole and Graham Cullum</p>
+		<br clear="all"/>
+	</page>
+
+</brand>

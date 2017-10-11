@@ -79,7 +79,11 @@
 							<div class="breadcrumb moved">
 								<span class="prefix">You are here: </span>
 								<a href="search?page=home">Australian Digital Collections</a>
-							</div>		
+								<xsl:if test="$brand">
+									<xsl:text> / </xsl:text>
+									<a href="?brand={$brand}&amp;page=home"><xsl:value-of select="$brand.title"/></a>
+								</xsl:if>
+							</div>
 							
 							<div id="mid" class="clearfix">
 								<!-- start menu -->
