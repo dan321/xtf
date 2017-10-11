@@ -96,14 +96,14 @@
 													<a href="#">Browse</a>
 													<ul>
 														<li>
-															<a href="search?database=&amp;collection=&amp;browse-creator=first&amp;sort=creator">Author</a>
+															<a href="search?brand={$brand}&amp;collection={$brand}&amp;browse-creator=first&amp;sort=creator">Author</a>
 														</li>
 														<li>
-															<a href="search?database=&amp;collection=&amp;browse-title=first&amp;sort=title">Title</a>
+															<a href="search?brand={$brand}&amp;collection={$brand}&amp;browse-title=first&amp;sort=title">Title</a>
 														</li>
 														
 														<li>
-															<a href="search?database=&amp;collection=&amp;browse-all=yes&amp;sort=title">All</a>
+															<a href="search?brand={$brand}&amp;collection={$brand}&amp;browse-all=yes&amp;sort=title">All</a>
 														</li>
 													</ul>
 												</li>
@@ -111,18 +111,18 @@
 													<a href="#">Search</a>
 													<ul>
 														<li>
-															<a href="search?database=">Keywords</a>
+															<a href="search?brand={$brand}">Keywords</a>
 														</li>
 														<li>
-															<a href="search?smode=advanced&amp;database=">Advanced</a>
+															<a href="search?brand={$brand}&amp;smode=advanced">Advanced</a>
 														</li>
 													</ul>
 												</li>
 												<li>
-													<a href="search?page=about">About</a>
+													<a href="search?brand={$brand}&amp;page=about">About</a>
 												</li>
 												<li>
-													<a href="search?page=contact">Contact</a>
+													<a href="search?brand={$brand}&amp;page=contact">Contact</a>
 												</li>
 											</ul>
 										</dd>
