@@ -287,7 +287,9 @@
 		</div>
         <!-- end footer -->
 		<script src="http://stats.usyd.edu.au/__utm.js" type="text/javascript"></script>
+		<!--
 		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/mootools.js"/>
+		-->
 		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/overlay.js"/>
 		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/milkbox.js"/>
 		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/common.js"/>

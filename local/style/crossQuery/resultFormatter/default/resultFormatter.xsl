@@ -39,8 +39,14 @@
             <xsl:copy-of select="$brand.links"/>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
             <!-- AJAX support -->
+            <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"/>
+            <script src="script/bookbag.js" type="text/javascript"/>
+            <script src="script/moreLike.js" type="text/javascript"/>
+            <!-- AJAX support -->
+            <!--
             <script src="script/yui/yahoo-dom-event.js" type="text/javascript"/>
             <script src="script/yui/connection-min.js" type="text/javascript"/>
+            -->
          </head>
          <body class="splash">
             <div id="topheader" class="topheader"><div id="topheader" class="topheader"><ul><li><a href="http://www.library.usyd.edu.au/" title="Library">Library</a></li><li><a href="https://myuni.sydney.edu.au" title="My Uni">My Uni</a></li><li><a href="http://intranet.sydney.edu.au" title="Staff Intranet">Staff Intranet</a></li></ul></div></div>
@@ -293,8 +299,14 @@
             <xsl:copy-of select="$brand.links"/>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
             <!-- AJAX support -->
+            <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"/>
+            <script src="script/bookbag.js" type="text/javascript"/>
+            <script src="script/moreLike.js" type="text/javascript"/>
+            <!-- AJAX support -->
+            <!--
             <script src="script/yui/yahoo-dom-event.js" type="text/javascript"/>
             <script src="script/yui/connection-min.js" type="text/javascript"/>
+            -->
          </head>
          <body class="splash">
 <!-- Google Tag Manager -->
