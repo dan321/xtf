@@ -713,19 +713,19 @@
                                     
                                     <xsl:choose>
                                        <xsl:when test="contains($urlParams,'Australian Poets')">
-                                          <option value="Australian Poets" selected="yes">Australian Poets</option>
+                                          <option value="Australian Poets. Brennan, Harford, Slessor" selected="yes">Australian Poets. Brennan, Harford, Slessor</option>
                                        </xsl:when>
                                        <xsl:otherwise>
-                                          <option value="Australian Poets">Australian Poets</option>
+                                          <option value="Australian Poets. Brennan, Harford, Slessor">Australian Poets. Brennan, Harford, Slessor</option>
                                        </xsl:otherwise>
                                     </xsl:choose>
                                     
                                     <xsl:choose>
-                                       <xsl:when test="contains($urlParams,'Classic Texts in Australian Taxation Law')">
-                                          <option value="Classic Texts in Australian Taxation Law" selected="yes">Classic Texts in Australian Taxation Law</option>
+                                       <xsl:when test="contains($urlParams,'Classic Texts in Australian and International Taxation Law')">
+                                          <option value="Classic Texts in Australian Taxation Law" selected="yes">Classic Texts in Australian and International Taxation Law</option>
                                        </xsl:when>
                                        <xsl:otherwise>
-                                          <option value="Classic Texts in Australian Taxation Law">Classic Texts in Australian Taxation Law</option>
+                                          <option value="Classic Texts in Australian Taxation Law">Classic Texts in Australian and International Taxation Law</option>
                                        </xsl:otherwise>
                                     </xsl:choose>
                                     
