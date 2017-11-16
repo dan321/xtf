@@ -757,11 +757,11 @@
                                     </xsl:choose>
                                     
                                     <xsl:choose>                                 
-                                       <xsl:when test="contains($urlParams,'Professor John Anderson Lectures, Notes and Other Writings')">
-                                          <option value="Professor John Anderson Lectures, Notes and Other Writings" selected="yes">Professor John Anderson Lectures, Notes and Other Writings</option>
+                                       <xsl:when test="contains($urlParams,'The John Anderson Archive')">
+                                          <option value="The John Anderson Archive" selected="yes">The John Anderson Archive</option>
                                        </xsl:when>
                                        <xsl:otherwise>
-                                          <option value="Professor John Anderson Lectures, Notes and Other Writings">Professor John Anderson Lectures, Notes and Other Writings</option>
+                                          <option value="The John Anderson Archive">The John Anderson Archive</option>
                                        </xsl:otherwise>
                                     </xsl:choose>
                                  </select>

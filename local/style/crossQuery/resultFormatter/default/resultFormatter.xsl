@@ -260,17 +260,17 @@
                   <li><span><a href="{$crossqueryPath}?{$modifyString}">Modify Search</a></span></li>
                </xsl:if>
                
-               <li><span><a href="search?database={$brand}"><span>Keyword search</span></a></span></li>
-               <li><span><a href="search?smode=advanced&amp;database={$brand}"><span>Advanced search</span></a></span></li>
-               <li><span><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title"><span>Browse</span></a></span>
+               <li><span><a href="search?collection={$collection}"><span>Keyword search</span></a></span></li>
+               <li><span><a href="search?brand={$brand}&amp;smode=advanced&amp;collection={$collection}"><span>Advanced search</span></a></span></li>
+               <li><span><a href="search?brand={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title"><span>Browse</span></a></span>
                   <ul>
-                     <li><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-creator=first&amp;sort=creator">Author</a></li>
-                     <li><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-title=first&amp;sort=title">Title</a></li>
-                     <li><a href="search?database={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title">All</a></li>
+                     <li><a href="search?brand={$brand}&amp;collection={$collection}&amp;browse-creator=first&amp;sort=creator">Author</a></li>
+                     <li><a href="search?brand={$brand}&amp;collection={$collection}&amp;browse-title=first&amp;sort=title">Title</a></li>
+                     <li><a href="search?brand={$brand}&amp;collection={$collection}&amp;browse-all=yes&amp;sort=title">All</a></li>
                   </ul> 
                </li>
-               <li><span><a href="index.jsp?database={$brand}&amp;collection={$collection}&amp;page=home"><span>Home</span></a></span></li>
-               <li><span><a href="index.jsp?database=&amp;content=collections%2fozlit%2ftext%2fcontact.html"><span>Contact</span></a></span></li>
+               <li><span><a href="search?brand={$brand}&amp;collection={$collection}&amp;page=home"><span>Home</span></a></span></li>
+               <li><span><a href="search?brand={$brand}&amp;page=contact"><span>Contact</span></a></span></li>
             </ul>
             
             
