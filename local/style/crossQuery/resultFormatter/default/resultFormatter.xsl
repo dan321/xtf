@@ -670,26 +670,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
          <form id="search" action="search/result">
             <input type="hidden" name="query" class="field" title="Enter search terms" value="Library"/>
             </form> -->
-         
-         
-         <form id="search" action="search">
-            <input type="hidden" name="page" value="home" />
-            <!--            <label for="target" class="hide_text">Collections:</label>-->
-            <select name="database">
-               <option value="">Select a collection</option>
-               <option value="acdp" label="The Australian Cooperative Digitisation Project">The Australian Cooperative Digitisation Project</option>
-               <option value="ozfed" label="Australian Federation Full Text Database">Australian Federation Full Text Database</option>
-               <option value="ozpoets" label="Australian Poets. Brennan, Harford, Slessor">Australian Poets. Brennan, Harford, Slessor</option>
-               <option value="ozlaw" label="Classic Texts in Australian and International Taxation Law">Classic Texts in Australian and International Taxation Law&#160;&#160;&#160;&#160;&#160;&#160;</option>
-               <option value="ozfleet" label="First Fleet and Early Settlement">First Fleet and Early Settlement</option>
-               <option value="anderson" label="The John Anderson Archive">The John Anderson Archive</option>
-               <option value="maiden" label="Joseph Henry Maiden Botanical Texts">Joseph Henry Maiden Botanical Texts</option>
-               <option value="ozexplore" label="Journals of Inland Exploration">Journals of Inland Exploration</option>
-            </select>
-            <input type="submit" value="Go" class="button"/>
-         </form>
-         
-         
+         <xsl:call-template name="collection-selector"/>
          
          <ul id="nav-global">
             <!-- use the "active" class to define an active item (highlighted text and nav indicator) -->

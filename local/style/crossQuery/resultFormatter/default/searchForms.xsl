@@ -32,27 +32,8 @@
                               <span id="tag-line">Australian Digital Collections </span>
                            </h1>
                         </div>
-                        <!-- start global nav -->                        
-                        <form id="search" action="index.jsp">
-                           <input type="hidden" name="page" value="home"/>
-                           <select name="database">
-                              <option value="ozlit">Select a collection</option>
-                              <option value="acdp" label="The Australian Cooperative Digitisation Project">The Australian Cooperative Digitisation
-                                 Project</option>
-                              <option value="ozfed" label="Australian Federation Full Text Database">Australian Federation Full Text Database</option>
-                              <option value="ozpoets" label="Australian Poets. Brennan, Harford, Slessor">Australian Poets. Brennan, Harford,
-                                 Slessor</option>
-                              <option value="ozlaw" label="Classic Texts in Australian and International Taxation Law">Classic Texts in Australian and
-                                 International Taxation Law&#160;&#160;&#160;&#160;&#160;&#160;</option>
-                              <option value="ozfleet" label="First Fleet and Early Settlement">First Fleet and Early Settlement</option>
-                              <option value="anderson" label="The John Anderson Archive">The John Anderson Archive</option>
-                              <option value="maiden" label="Joseph Henry Maiden Botanical Texts">Joseph Henry Maiden Botanical Texts</option>
-                              <option value="ozexplore" label="Journals of Inland Exploration">Journals of Inland Exploration</option>
-                           </select>
-                           <input type="submit" value="Go" class="button"/>
-                        </form>
-                        
-                        
+                        <!-- start global nav -->         
+                        <xsl:call-template name="collection-selector"/>
                         
                         <ul id="nav-global">
                            <!-- use the "active" class to define an active item (highlighted text and nav indicator) -->
@@ -281,88 +262,14 @@
                               </th>
                               <td>
                                  <select size="1" name="text-prox">
-                                    <xsl:choose>
-                                       <xsl:when test="$text-prox = '1'">
-                                          <option value=""/>
-                                          <option value="1" selected="selected">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                          <option value="10">10</option>
-                                          <option value="20">20</option>
-                                       </xsl:when>
-                                       <xsl:when test="$text-prox = '2'">
-                                          <option value=""/>
-                                          <option value="1">1</option>
-                                          <option value="2" selected="selected">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                          <option value="10">10</option>
-                                          <option value="20">20</option>
-                                       </xsl:when>
-                                       <xsl:when test="$text-prox = '3'">
-                                          <option value=""/>
-                                          <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3" selected="selected">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                          <option value="10">10</option>
-                                          <option value="20">20</option>
-                                       </xsl:when>
-                                       <xsl:when test="$text-prox = '4'">
-                                          <option value=""/>
-                                          <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4" selected="selected">4</option>
-                                          <option value="5">5</option>
-                                          <option value="10">10</option>
-                                          <option value="20">20</option>
-                                       </xsl:when>
-                                       <xsl:when test="$text-prox = '5'">
-                                          <option value=""/>
-                                          <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5" selected="selected">5</option>
-                                          <option value="10">10</option>
-                                          <option value="20">20</option>
-                                       </xsl:when>
-                                       <xsl:when test="$text-prox = '10'">
-                                          <option value=""/>
-                                          <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                          <option value="10" selected="selected">10</option>
-                                          <option value="20">20</option>
-                                       </xsl:when>
-                                       <xsl:when test="$text-prox = '20'">
-                                          <option value=""/>
-                                          <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                          <option value="10">10</option>
-                                          <option value="20" selected="selected">20</option>
-                                       </xsl:when>
-                                       <xsl:otherwise>
-                                          <option value="" selected="selected"/>
-                                          <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                          <option value="10">10</option>
-                                          <option value="20">20</option>
-                                       </xsl:otherwise>
-                                    </xsl:choose>
+                                    <xsl:for-each select="('', '1', '2', '3', '4', '5', '10', '20')">
+                                    	<option value=".">
+                                    		<xsl:if test=". = $text-prox">
+                                    			<xsl:attribute name="selected">selected</xsl:attribute>
+                                    		</xsl:if>
+                                    		<xsl:value-of select="."/>
+                                    	</option>
+                                    </xsl:for-each>
                                  </select>
                                  <xsl:text> word(s)</xsl:text>
                               </td>
@@ -473,6 +380,15 @@
                               <td>
                                  <select size="1" name="subject">
                                     <option value="">any</option>
+                                    <xsl:for-each select="('anthropology', 'botany', 'early settlement', 'exploration', 'federation', 'food', 'labour history', 'life sciences', 'mining', 'politics', 'religion', 'travel', 'university')">
+                                    	<option value="{.}">
+                                    		<xsl:if test="contains($urlParams, .)">
+                                    			<xsl:attribute name="selected">selected</xsl:attribute>
+                                    		</xsl:if>
+                                    		<xsl:value-of select="."/>
+                                    	</option>
+                                    </xsl:for-each>
+                                    <!--
                                     <xsl:choose>
                                        <xsl:when test="contains($urlParams,'anthropology')">
                                           <option value="anthropology" selected="yes">anthropology</option>
@@ -576,7 +492,8 @@
                                        <xsl:otherwise>
                                           <option value="university">university</option>
                                        </xsl:otherwise>
-                                    </xsl:choose>                              
+                                    </xsl:choose>                    
+                                    -->
                                  </select>
                               </td>
                            </tr>
