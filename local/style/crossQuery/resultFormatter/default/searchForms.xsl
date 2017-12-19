@@ -9,6 +9,10 @@
    <xsl:param name="http.URL"/>
    <!-- template below is copied and modified from SETIS-customised XTF 2 searchForms.xsl -->
    
+   
+   <xsl:param name="brand.search-examples" select="($brand.file//search-examples, $default-brand.file//search-examples)[1]/*" xpath-default-namespace="http://www.w3.org/1999/xhtml"/>
+   <xsl:param name="brand.collection-title" select="if ($brand.file//title='') then '' else $brand.file//title" xpath-default-namespace="http://www.w3.org/1999/xhtml"/>
+   
    <!-- main form page -->
    <xsl:template match="crossQueryResult" mode="form" exclude-result-prefixes="#all">
       <html xml:lang="eng" xmlns="http://www.w3.org/1999/xhtml" lang="eng">
@@ -165,7 +169,7 @@
       <form class="boxed noprint" method="get" action="{$crossqueryPath}">
          <input type="hidden" name="smode" value="simple"/>
          <!--   Inclusion of database parameter prevents return to default display.  RB.  SETIS.  09/03/10    -->
-         
+         <input type="hidden" name="collection" value='"{$brand.collection-title}"'/>
          <input type="text" name="keyword" size="50" value="{$keyword}"/>
          <!--   All searches will be confined to the required collection.  RB.  SETIS. 04/03/10    -->
          
@@ -175,35 +179,7 @@
          <!--<input type="reset" onclick="location.href='{$crossqueryPath}" value="Clear"/>-->
          <input type="reset" onclick="location.href='{$crossqueryPath}'" class="button" value="Clear"/>
       </form>
-      <table class="tabledata_blue">
-         <tbody>
-            <tr>
-               <td colspan="2">
-                  <strong>Examples:</strong>
-               </td>
-            </tr>
-            <tr>
-               <th class="sampleQuery">federation</th>
-               <td class="sampleDescrip">Search keywords (full text and metadata) for federation'</td>
-            </tr>
-            <tr>
-               <th class="sampleQuery">south africa</th>
-               <td class="sampleDescrip">Search keywords for 'south' AND 'africa'</td>
-            </tr>
-            <tr>
-               <th class="sampleQuery">"south africa"</th>
-               <td class="sampleDescrip">Search keywords for the phrase 'south africa'</td>
-            </tr>
-            <tr>
-               <th class="sampleQuery">fed*</th>
-               <td class="sampleDescrip">Search keywords for the string 'fed' followed by 0 or more characters</td>
-            </tr>
-            <!--<tr>
-               <th class="sampleQuery">africa?</th>
-               <td class="sampleDescrip">Search keywords for the string 'africa' followed by a single character</td>
-            </tr>-->
-         </tbody>
-      </table>
+      <xsl:copy-of select="$brand.search-examples"/>
    </xsl:template>
    
    <!-- advanced form -->
@@ -263,7 +239,7 @@
                               <td>
                                  <select size="1" name="text-prox">
                                     <xsl:for-each select="('', '1', '2', '3', '4', '5', '10', '20')">
-                                    	<option value=".">
+                                    	<option value="{.}">
                                     		<xsl:if test=". = $text-prox">
                                     			<xsl:attribute name="selected">selected</xsl:attribute>
                                     		</xsl:if>
@@ -610,6 +586,25 @@
                               <td>
                                  <select size="1" name="collection">
                                     <option value="">any</option>
+                                    <xsl:for-each select="(
+                                    	'Australian Cooperative Digitisation Project', 
+                                    	'Australian Federation Full Text Database', 
+                                    	'Australian Poets. Brennan, Harford, Slessor',
+                                    	'Classic Texts in Australian and International Taxation Law',
+                                    	'First Fleet and Early Settlement',
+                                    	'Joseph Henry Maiden Botanical Texts',
+                                    	'Journals of Inland Exploration',
+                                    	'The John Anderson Archive'
+                                    )">
+                                    	<option value='"{.}"'>
+                                    		<xsl:if test="$brand.collection-title = .">
+                                    			<xsl:attribute name="selected">selected</xsl:attribute>
+                                    		</xsl:if>
+                                    		<xsl:value-of select="."/>
+                                    	</option>
+                                    </xsl:for-each>
+                                    <!--
+                                 </select>
                                     <xsl:choose>
                                        <xsl:when test="contains($urlParams,'Australian Cooperative Digitisation Project')">
                                           <option value="The Australian Cooperative Digitisation Project" selected="yes">The Australian Cooperative Digitisation Project</option>
@@ -680,7 +675,7 @@
                                        <xsl:otherwise>
                                           <option value="The John Anderson Archive">The John Anderson Archive</option>
                                        </xsl:otherwise>
-                                    </xsl:choose>
+                                    </xsl:choose>-->
                                  </select>
                               </td>
                            </tr>
