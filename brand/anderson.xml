@@ -136,5 +136,32 @@ and teaching:
 		Edited by Creagh McLean Cole and Graham Cullum</p>
 		<br clear="all"/>
 	</page>
-
+	
+	<search-examples>
+		<table class="tabledata_blue">
+			<tbody>
+				<tr>
+					<td colspan="2">
+						<strong>Examples:</strong>
+					</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">plato</th>
+					<td class="sampleDescrip">Search keywords (full text and metadata) for 'plato'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">plato socratic</th>
+					<td class="sampleDescrip">Search keywords for 'plato' AND 'socratic'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">"later socratic dialogues"</th>
+					<td class="sampleDescrip">Search keywords for the phrase 'later socratic dialogues'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">socrat*</th>
+					<td class="sampleDescrip">Search keywords for the string 'socrat' followed by 0 or more characters</td>
+				</tr>
+			</tbody>
+		</table>
+		</search-examples>
 </brand>

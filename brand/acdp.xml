@@ -8,5 +8,33 @@
 		<h1>The Australian Cooperative Digitisation Project</h1>
 		<p><strong>The Australian Cooperative Digitisation Project</strong> at the National Library of Australia was a pilot project to develop a digital library of Australian journals, newspapers and novels published in the period 1840-1845. The University of Sydney Library hosts the four novels included within that project.</p>
 	</page>
+	
+	<search-examples>
+		<table class="tabledata_blue">
+			<tbody>
+				<tr>
+					<td colspan="2">
+						<strong>Examples:</strong>
+					</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">bush</th>
+					<td class="sampleDescrip">Search keywords (full text and metadata) for 'bush'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">bush sydney</th>
+					<td class="sampleDescrip">Search keywords for 'bush' AND 'sydney'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">"adventures of a colonist"</th>
+					<td class="sampleDescrip">Search keywords for the phrase 'adventures of a colonist'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">colon*</th>
+					<td class="sampleDescrip">Search keywords for the string 'colon' followed by 0 or more characters</td>
+				</tr>
+			</tbody>
+		</table>	
+	</search-examples>
 
 </brand>

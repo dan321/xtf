@@ -80,5 +80,31 @@
 		
 		<p>J.T., Sydney 2004</p>
 </page>
-
+	<search-examples>
+<table class="tabledata_blue">
+			<tbody>
+				<tr>
+					<td colspan="2">
+						<strong>Examples:</strong>
+					</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">night</th>
+					<td class="sampleDescrip">Search keywords (full text and metadata) for 'night'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">forest night</th>
+					<td class="sampleDescrip">Search keywords for 'forest' AND 'night'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">"forest of night"</th>
+					<td class="sampleDescrip">Search keywords for the phrase 'forest of night'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">name*</th>
+					<td class="sampleDescrip">Search keywords for the string 'name' followed by 0 or more characters</td>
+				</tr>
+			</tbody>
+		</table>
+	</search-examples>
 </brand>

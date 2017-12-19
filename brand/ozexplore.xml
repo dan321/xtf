@@ -14,4 +14,31 @@
 		</span>
 	</page>
 
+	<search-examples>
+		<table class="tabledata_blue">
+			<tbody>
+				<tr>
+					<td colspan="2">
+						<strong>Examples:</strong>
+					</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">sydney</th>
+					<td class="sampleDescrip">Search keywords (full text and metadata) for 'sydney'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">sydney expedition</th>
+					<td class="sampleDescrip">Search keywords for 'sydney' AND 'expedition'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">"three expeditions in the interior"</th>
+					<td class="sampleDescrip">Search keywords for the phrase 'three expeditions in the interior'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">austral*</th>
+					<td class="sampleDescrip">Search keywords for the string 'austral' followed by 0 or more characters</td>
+				</tr>
+			</tbody>
+		</table>
+	</search-examples>
 </brand>

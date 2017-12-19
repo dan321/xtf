@@ -13,5 +13,33 @@
 			title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.title=Joseph+Henry+Maiden+Botanical+Texts&amp;rft.creator=University+of+Sydney+Library&amp;rft.subject=botany&amp;rft.description=Pioneering+botanical+texts+and+images.&amp;rft.publisher=University+of+Sydney+Library&amp;rft.type=text&amp;rft.format=text&amp;rft.identifier=http%3A%2F%2Fadc.library.usyd.edu.au%2Findex.jsp%3Fdatabase%3Dmaiden%26page%3Dhome&amp;rft.language=en&amp;rft.rights=http%3A%2F%2Fsydney.edu.au%2Fdisclaimer.shtml">
 		</span>
 	</page>
+	
+	<search-examples>
+		<table class="tabledata_blue">
+			<tbody>
+				<tr>
+					<td colspan="2">
+						<strong>Examples:</strong>
+					</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">eucalyptus</th>
+					<td class="sampleDescrip">Search keywords (full text and metadata) for 'eucalyptus'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">eucalyptus smith</th>
+					<td class="sampleDescrip">Search keywords for 'eucalyptus' AND 'smith'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">"eucalyptus pilularis"</th>
+					<td class="sampleDescrip">Search keywords for the phrase 'eucalyptus pilularis'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">eucalypt*</th>
+					<td class="sampleDescrip">Search keywords for the string 'eucalypt' followed by 0 or more characters</td>
+				</tr>
+			</tbody>
+		</table>
+	</search-examples>
 
 </brand>

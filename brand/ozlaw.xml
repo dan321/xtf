@@ -41,6 +41,33 @@
 		<br></br>Challis Professor of Law
 		<br></br>University of Sydney
 		</p>
-</page>
+	</page>
 
+	<search-examples>
+<table class="tabledata_blue">
+			<tbody>
+				<tr>
+					<td colspan="2">
+						<strong>Examples:</strong>
+					</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">money</th>
+					<td class="sampleDescrip">Search keywords (full text and metadata) for 'money'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">money tax</th>
+					<td class="sampleDescrip">Search keywords for 'money' AND 'tax'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">"income tax"</th>
+					<td class="sampleDescrip">Search keywords for the phrase 'income tax'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">tax*</th>
+					<td class="sampleDescrip">Search keywords for the string 'tax' followed by 0 or more characters</td>
+				</tr>
+			</tbody>
+		</table>
+	</search-examples>
 </brand>

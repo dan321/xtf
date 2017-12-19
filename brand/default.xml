@@ -294,5 +294,33 @@
 		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/milkbox.js"/>
 		<script type="text/javascript" src="http://adc.library.usyd.edu.au/screens/scripts/common.js"/>
 	</footer>
+	
+	<search-examples>
+		<table class="tabledata_blue">
+			<tbody>
+				<tr>
+					<td colspan="2">
+						<strong>Examples:</strong>
+					</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">federation</th>
+					<td class="sampleDescrip">Search keywords (full text and metadata) for federation'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">south africa</th>
+					<td class="sampleDescrip">Search keywords for 'south' AND 'africa'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">"south africa"</th>
+					<td class="sampleDescrip">Search keywords for the phrase 'south africa'</td>
+				</tr>
+				<tr>
+					<th class="sampleQuery">fed*</th>
+					<td class="sampleDescrip">Search keywords for the string 'fed' followed by 0 or more characters</td>
+				</tr>
+			</tbody>
+		</table>
+	</search-examples>
 
 </brand>
