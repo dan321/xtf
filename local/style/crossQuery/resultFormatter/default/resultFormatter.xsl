@@ -546,56 +546,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       </html>
    </xsl:template>               
 
-   <xsl:template name="setis-breadcrumb">
-         <span class="prefix">You are here: </span>
-         <a href="search?page=home">Australian Digital Collections</a>
-         <xsl:if test="$brand != 'default'">
-         	<xsl:text> / </xsl:text>
-         	<a href="search?database={$brand}&amp;page=home">
-         		<xsl:value-of select="$brand.title"/>
-         	</a>
-         </xsl:if>
-         <!--
-         <xsl:choose>
-            <xsl:when test="$brand = 'ozlit'"></xsl:when>
-            <xsl:when test="$brand = 'acdp'">
-               
-               <a href="index.jsp?database=acdp&amp;page=home">The Australian Cooperative Digitisation Project</a>
-            </xsl:when>
-            <xsl:when test="$brand = 'ozfed'">
-               <xsl:text> / </xsl:text>
-               <a href="index.jsp?database=ozfed&amp;page=home">Australian Federation Full Text Database</a>
-            </xsl:when>
-            <xsl:when test="$brand = 'ozpoets'">
-               <xsl:text> / </xsl:text>
-               <a href="index.jsp?database=ozpoets&amp;page=home">Australian Poets. Brennan, Harford, Slessor</a>
-            </xsl:when>
-            <xsl:when test="$brand = 'ozlaw'">
-               <xsl:text> / </xsl:text>
-               <a href="index.jsp?database=ozlaw&amp;page=home">Classic Texts in Australian and International Taxation Law</a>
-            </xsl:when>
-            <xsl:when test="$brand = 'ozfleet'">
-               <xsl:text> / </xsl:text>
-               <a href="index.jsp?database=ozfleet&amp;page=home">First Fleet and Early Settlement</a>
-            </xsl:when>
-            <xsl:when test="$brand = 'anderson'">
-               <xsl:text> / </xsl:text>
-               <a href="index.jsp?database=anderson&amp;page=home">The John Anderson Archive</a>
-            </xsl:when>
-            <xsl:when test="$brand = 'maiden'">
-               <xsl:text> / </xsl:text>
-               <a href="index.jsp?database=maiden&amp;page=home">Joseph Henry Maiden Botanical Texts</a>
-            </xsl:when>
-            <xsl:when test="$brand = 'ozexplore'">
-               <xsl:text> / </xsl:text>
-               <a href="index.jsp?database=ozexplore&amp;page=home">Journals of Inland Exploration</a>
-            </xsl:when>
-            <xsl:otherwise>             
-            </xsl:otherwise>
-         </xsl:choose>
-         -->
-      
-   </xsl:template>
    
    <!-- ====================================================================== -->
    <!-- Recursive template for rendering rows of hyperlinks. SETIS. RB 03/03/10-->

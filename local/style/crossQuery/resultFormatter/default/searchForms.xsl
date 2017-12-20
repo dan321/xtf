@@ -33,7 +33,7 @@
                            <h1>
                               <a id="logo" href="http://sydney.edu.au/">The University of Sydney</a>
                               <span id="separator">-</span>
-                              <span id="tag-line">Australian Digital Collections </span>
+                              <span id="tag-line"><xsl:value-of select="$brand.title"/></span>
                            </h1>
                         </div>
                         <!-- start global nav -->         
@@ -111,8 +111,7 @@
                      </div>
                      <br/>
                      <div class="breadcrumb moved">
-                        <span class="prefix">You are here: </span>
-                        <a href="search?page=home">Australian Digital Collections</a>
+                     	<xsl:call-template name="setis-breadcrumb"/>
                      </div>
                      <!-- ( end tabs pane) -->
                      <div id="mid" class="clearfix">
@@ -587,7 +586,7 @@
                                  <select size="1" name="collection">
                                     <option value="">any</option>
                                     <xsl:for-each select="(
-                                    	'Australian Cooperative Digitisation Project', 
+                                    	'The Australian Cooperative Digitisation Project', 
                                     	'Australian Federation Full Text Database', 
                                     	'Australian Poets. Brennan, Harford, Slessor',
                                     	'Classic Texts in Australian and International Taxation Law',

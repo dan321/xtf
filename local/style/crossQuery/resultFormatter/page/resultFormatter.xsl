@@ -77,12 +77,7 @@
 							 --></div>
 							<br />	
 							<div class="breadcrumb moved">
-								<span class="prefix">You are here: </span>
-								<a href="search?page=home">Australian Digital Collections</a>
-								<xsl:if test="$brand">
-									<xsl:text> / </xsl:text>
-									<a href="?brand={$brand}&amp;page=home"><xsl:value-of select="$brand.title"/></a>
-								</xsl:if>
+								<xsl:call-template name="setis-breadcrumb"/>
 							</div>
 							
 							<div id="mid" class="clearfix">

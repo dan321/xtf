@@ -47,6 +47,18 @@
 		</div>
 	</xsl:template>
 
+
+   <xsl:template name="setis-breadcrumb">
+         <span class="prefix">You are here: </span>
+         <a href="search?page=home">Australian Digital Collections</a>
+         <xsl:if test="$brand != 'default'">
+         	<xsl:text> / </xsl:text>
+         	<a href="search?brand={$brand}&amp;page=home">
+         		<xsl:value-of select="$brand.title"/>
+         	</a>
+         </xsl:if>
+   </xsl:template>	
+	
 	<xsl:template name="collection-selector">	
 		<!-- Start global nav -->
 		<form id="search" action="">
