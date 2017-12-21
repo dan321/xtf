@@ -6,7 +6,7 @@
 	<page name="home" title="Australian Federation Full Text Database">
 		<div style="width: 736px; height: 205px; background-image: url(http://adc.library.usyd.edu.au/collections/ozfed/images/banner.jpg);"></div>
 		<h1>Australian Federation Full Text Database</h1>
-		<p><img align="left" src="http://setis.library.usyd.edu.au/fed/cfed_logo.gif" alt="federation_logo"/>Welcome to the 
+		<p><img align="left" src="/collections/oztexts/images/cfed_logo.gif" alt="federation_logo"/>Welcome to the 
 		Australian Federation Full-Text Database. Digital Conversion of the core collection was funded by the 
 		NSW Centenary of Federation in 2001. Digital reproduction of the works of Robert Garran has been 
 		undertaken with the kind permission of Mrs Win Garran, Deakin, ACT.</p>
