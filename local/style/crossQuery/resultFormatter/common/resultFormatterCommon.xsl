@@ -42,7 +42,9 @@
 			<h1>
 				<a id="logo" href="http://sydney.edu.au/">The University of Sydney</a>
 				<span id="separator">-</span>
-				<span id="tag-line">Australian Digital Collections</span>
+				   <span id="tag-line">
+					  <xsl:value-of select="$brand.title"/>
+				   </span>
 			</h1>
 		</div>
 	</xsl:template>
