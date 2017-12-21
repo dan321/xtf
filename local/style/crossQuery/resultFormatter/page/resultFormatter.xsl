@@ -113,6 +113,8 @@
 														</li>
 													</ul>
 												</li>
+												<!-- the Anderson corpus has some additional menu items that are inserted here -->
+												<xsl:copy-of select="$brand.file//html:additional-menu-items/*"/>
 												<li>
 													<a href="search?brand={$brand}&amp;page=about">About</a>
 												</li>
