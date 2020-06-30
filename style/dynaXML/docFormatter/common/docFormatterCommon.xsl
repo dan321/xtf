@@ -2,6 +2,7 @@
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns:xtf="http://cdlib.org/xtf"
    xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
    xmlns:session="java:org.cdlib.xtf.xslt.Session"
    extension-element-prefixes="session"
    exclude-result-prefixes="#all">
@@ -245,9 +246,93 @@
          <body>
             <xsl:copy-of select="$brand.header"/>
             <div class="container">
-               <h2>Citation</h2>
-               <div class="citation">
-                  <p><xsl:value-of select="/*/*:meta/*:creator[1]"/>. 
+               <h1>The Correspondence of Ferdinand von Mueller</h1>
+               <p>Edited by R. W. Home, Thomas A. Darragh, A. M. Lucas, Sara Maroske, D. M. Sinkora, J. H. Voigt and Monika Wells</p>
+
+               <!-- Declare reused variables -->
+               <xsl:variable name="filename" select="replace(replace(/*/xtf:meta/identifier[1], '(-final)?.doc', ''), '-', '.')" />
+               
+               <xsl:variable name="current-date" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')" />
+
+               <xsl:variable name="url" select="concat($xtfURL,$dynaxmlPath,'?docId=',$docId)" />
+
+               <xsl:variable name="author" select="(/*/xtf:meta/facet-author)[1]" />
+               <xsl:variable name="addressee" select="(/*/xtf:meta/facet-addressee)[1]" />
+
+
+               <!-- Variables for expanded date -->
+               <xsl:variable name="tokenised-filename" select="tokenize($filename, '\.')"/>
+               
+               <xsl:variable name="year" select="$tokenised-filename[1]"/>
+               <xsl:variable name="normed-year" select="replace(normalize-space($year), '^M', '')"/>
+               
+               <xsl:variable name="month" select="$tokenised-filename[2]"/>
+               <xsl:variable name="month-names" select="tokenize('January,February,March,April,May,June,
+                  July,August,September,October,November,December', ',')"/>
+               
+               <xsl:variable name="day" select="$tokenised-filename[3]"/>
+               <xsl:variable name="normed-day" select="replace($day, '\D', '')"/>
+
+                <!--    Combine variables for expanded date       -->
+               <xsl:variable name="expanded-date" select="
+                  concat(
+                  
+                  if (xs:integer($normed-day) = 0) then '' else concat(' ', number($normed-day), ' '), 
+                  
+                  if ($month = '00') then '' else  concat(' ', $month-names[number($month)], ' '),
+                  
+                  if (number($normed-year) &lt; 40) then '19' else '18', $normed-year  
+                  
+                  )
+                  "/>               
+               
+
+
+
+
+
+               <div class="short-form-citation">
+                  <h3>Short citation</h3>
+
+                  <p>
+                     CFvM letter number
+                     <xsl:value-of select="$filename"/>. 
+                     [<em><u><xsl:value-of select="$url"/></u></em> accessed <xsl:value-of select="$current-date" />]
+                  </p>
+               </div>
+
+               <div class="intermediate-form-citation">
+                  <h3>Intermediate citation</h3>
+                  <p>
+                     <xsl:value-of select="$author" /> to
+                     <xsl:value-of select="$addressee" />,
+                     <xsl:value-of select="$expanded-date"/>,
+                     CFvM letter number
+                     <xsl:value-of select="$filename"/>. 
+                     [<em><u><xsl:value-of select="$url"/></u></em> accessed <xsl:value-of select="$current-date" />]
+                  </p>
+               </div>
+
+               <div class="long-form-citation">
+                  <h3>
+                     Long citation
+                     <xsl:value-of select="(//p[@rend='number'])[1]" />
+                  </h3>
+                  <p>
+                     <xsl:value-of select="$author" /> to
+                     <xsl:value-of select="$addressee" />,
+                     <xsl:value-of select="$expanded-date"/>,
+                     Home <em>et al</em>. (editors), The Correspondence of Ferdinand von Mueller letter number
+                     <xsl:value-of select="$filename"/>. 
+                     [<em><u><xsl:value-of select="$url"/></u></em> accessed <xsl:value-of select="$current-date" />]
+                  </p>
+               </div>
+
+
+               <!-- <div class="citation">
+                  <p>
+                     <xsl:value-of select="replace((//xtf:meta/identifier)[1], '.doc', '')"/>
+                     <xsl:value-of select="/*/*:meta/*:creator[1]"/>. 
                      <xsl:value-of select="/*/*:meta/*:title[1]"/>. 
                      <xsl:value-of select="/*/*:meta/*:year[1]"/>.<br/>
                      [<xsl:value-of select="concat($xtfURL,$dynaxmlPath,'?docId=',$docId)"/>]</p>
@@ -258,7 +343,7 @@
                      </xsl:attribute>
                      <span class="down1">Close this Window</span>
                   </a>
-               </div>
+               </div> -->
             </div>
          </body>
       </html>

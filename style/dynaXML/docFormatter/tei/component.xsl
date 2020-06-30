@@ -197,10 +197,13 @@
    			<xsl:attribute name="class" select="."/>
    		</xsl:for-each>
    		<xsl:copy-of select="@style"/>
+   	   </xsl:element>
+
    		<xsl:if test="*:space"><xsl:comment>space:</xsl:comment></xsl:if>
    		<xsl:apply-templates/>
-   	</xsl:element>
    </xsl:template>
+
+
    
    <!-- ====================================================================== -->
    <!-- Speech                                                                 -->
@@ -288,7 +291,7 @@
    <xsl:template match="*:note">
    	<xsl:variable name="note-marker" select=" (@n, '*')[1] "/>
    	<xsl:variable name="note-id" select=" concat('note-', (@n, generate-id())[1] ) "/>
-   	<a class="note-ref" href="#{$note-id}"><xsl:value-of select="$note-marker"/></a>
+   	<a class="note-ref" href="#{$note-id}"><sup><xsl:value-of select="$note-marker"/></sup></a>
    </xsl:template>
    <!--
    <xsl:template match="*:note">
@@ -417,12 +420,12 @@
    			<xsl:variable name="note-marker" select=" (@n, '*')[1] "/>
    			<span class="note-label" id="{$note-id}"><xsl:value-of select="$note-marker"/><xsl:text> </xsl:text></span>
    		</xsl:for-each>
-      	      	<xsl:apply-templates/>
+      	        <xsl:apply-templates/>
       	 </xsl:element>
       </xsl:element>
       <xsl:for-each select=".//*:note">
    	<div class="note">
-   		<xsl:apply-templates/>
+   	   <xsl:apply-templates />
    	</div>
       </xsl:for-each>
 
@@ -640,8 +643,10 @@
          <xsl:when test="@rend='underline'">
             <u><xsl:apply-templates/></u>
          </xsl:when>
+
+         <!-- Default <hi> action changed to underline -->
          <xsl:otherwise>
-            <i><xsl:apply-templates/></i>
+            <u><xsl:apply-templates/></u>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>

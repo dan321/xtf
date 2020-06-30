@@ -173,7 +173,6 @@
    <!-- ====================================================================== -->
    
    <xsl:template name="frames" exclude-result-prefixes="#all">
-      
       <xsl:variable name="bbar.href"><xsl:value-of select="$query.string"/>&#038;doc.view=bbar&#038;chunk.id=<xsl:value-of select="$chunk.id"/>&#038;toc.depth=<xsl:value-of select="$toc.depth"/>&#038;brand=<xsl:value-of select="$brand"/><xsl:value-of select="$search"/></xsl:variable> 
       <xsl:variable name="toc.href"><xsl:value-of select="$query.string"/>&#038;doc.view=toc&#038;chunk.id=<xsl:value-of select="$chunk.id"/>&#038;toc.depth=<xsl:value-of select="$toc.depth"/>&#038;brand=<xsl:value-of select="$brand"/>&#038;toc.id=<xsl:value-of select="$toc.id"/><xsl:value-of select="$search"/>#X</xsl:variable>
       <xsl:variable name="content.href"><xsl:value-of select="$query.string"/>&#038;doc.view=content&#038;chunk.id=<xsl:value-of select="$chunk.id"/>&#038;toc.depth=<xsl:value-of select="$toc.depth"/>&#038;brand=<xsl:value-of select="$brand"/>&#038;anchor.id=<xsl:value-of select="$anchor.id"/><xsl:value-of select="$search"/><xsl:call-template name="create.anchor"/></xsl:variable>
@@ -248,7 +247,6 @@
                   </title>
                   <link rel="stylesheet" type="text/css" href="{$css.path}toc.css"/>
                   <link rel="shortcut icon" href="icons/default/favicon.ico" />
-
                </head>
                <body>
                   <div class="toc">
@@ -265,7 +263,6 @@
    <!-- ====================================================================== -->
    
    <xsl:template name="content" exclude-result-prefixes="#all">
-      
       <xsl:variable name="navbar">
          <xsl:call-template name="navbar"/>
       </xsl:variable>
@@ -277,7 +274,6 @@
             </title>
             <link rel="stylesheet" type="text/css" href="{$css.path}{$content.css}"/>
             <link rel="shortcut icon" href="icons/default/favicon.ico" />
-
          </head>
          <body>
             
@@ -323,7 +319,6 @@
                   </td>
                </tr>
             </table>
-            
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
                <!-- BEGIN MIDNAV ROW -->
                <tr>
@@ -460,7 +455,6 @@
    <!-- ====================================================================== -->
    
    <xsl:template name="navbar" exclude-result-prefixes="#all">
-      
       <xsl:variable name="prev">
          <xsl:choose>
             <!-- preceding div sibling -->
